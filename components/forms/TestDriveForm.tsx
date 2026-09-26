@@ -79,17 +79,25 @@ export default function TestDriveForm({ cars }: TestDriveFormProps) {
       </h2>
 
       <div>
-        <label className="label-fm">Select Car</label>
-        <select className="input-fm" value={form.car} onChange={(e) => set("car", e.target.value)} required>
-          <option value="">Choose a car...</option>
-          {cars.map((car) => (
-            <option key={car.id} value={car.stockId}>
-              {car.year} {car.brand} {car.model} {car.variant} — {
-                car.price.toLocaleString("en-IN", { style: "currency", currency: "INR", maximumFractionDigits: 0 })
-              }
-            </option>
-          ))}
-        </select>
+        <label className="label-fm">Car of Interest *</label>
+        {cars.length > 0 ? (
+          <select className="input-fm" value={form.car} onChange={(e) => set("car", e.target.value)} required>
+            <option value="">Choose a car...</option>
+            {cars.map((car) => (
+              <option key={car.id} value={`${car.year} ${car.brand} ${car.model} (${car.stockId})`}>
+                {car.year} {car.brand} {car.model} {car.variant}
+              </option>
+            ))}
+          </select>
+        ) : (
+          <input
+            className="input-fm"
+            placeholder="e.g. Swift, Creta, or specific car model you want to test drive"
+            value={form.car}
+            onChange={(e) => set("car", e.target.value)}
+            required
+          />
+        )}
       </div>
 
       <div>

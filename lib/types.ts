@@ -2,7 +2,7 @@
 // FIRST MOTORS — TYPE DEFINITIONS
 // =============================================================================
 
-export type FuelType = "Petrol" | "Diesel" | "CNG" | "Electric" | "Hybrid";
+export type FuelType = "Petrol" | "Diesel" | "CNG" | "Electric" | "Hybrid" | "Petrol + CNG";
 export type TransmissionType = "Manual" | "Automatic" | "AMT" | "DCT" | "CVT";
 export type OwnershipType = "1st Owner" | "2nd Owner" | "3rd Owner" | "4th+ Owner";
 export type BodyType = "Hatchback" | "Sedan" | "SUV" | "MUV" | "Coupe" | "Convertible" | "Pickup" | "Van";
@@ -34,14 +34,14 @@ export interface CarListing {
   model: string;
   variant: string;
   year: number;
-  bodyType: BodyType;
+  bodyType?: BodyType;
   color: string;
 
   // Specs
   fuelType: FuelType;
   transmission: TransmissionType;
-  engine: string; // e.g. "1197cc"
-  mileage: string; // e.g. "22 kmpl"
+  engine?: string; // e.g. "1197cc"
+  mileage?: string; // e.g. "22 kmpl"
   seats: number;
 
   // Ownership & history

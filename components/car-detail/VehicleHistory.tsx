@@ -12,7 +12,9 @@ export default function VehicleHistory({ car }: VehicleHistoryProps) {
     {
       label: "Insurance",
       value: car.insuranceExpiry
-        ? `${car.insuranceType ?? "Comprehensive"} — Valid till ${car.insuranceExpiry}`
+        ? car.insuranceExpiry.toLowerCase() === "yes" || car.insuranceExpiry.toLowerCase() === "valid"
+          ? "Valid / Active"
+          : `${car.insuranceType ?? "Comprehensive"} — Valid till ${car.insuranceExpiry}`
         : "Available on request",
     },
     {

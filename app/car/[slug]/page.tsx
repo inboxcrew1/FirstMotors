@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { getCarBySlug, getRelatedCars } from "@/data/inventory";
+import { getCarBySlug, getRelatedCars, getAllCars } from "@/data/inventory";
 import { formatPrice, formatKmExact, formatWhatsAppLink, formatPhoneLink } from "@/lib/utils";
 import { SITE_CONFIG, WHATSAPP_MESSAGES } from "@/data/config";
 import ImageGallery from "@/components/car-detail/ImageGallery";
@@ -16,12 +16,22 @@ interface Props {
   params: Promise<{ slug: string }>;
 }
 
+export async function generateStaticParams() {
+  const cars = getAllCars();
+  return cars.map((car) => ({
+    slug: car.slug,
+  }));
+}
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const car = getCarBySlug(slug);
   if (!car) return { title: "Car Not Found | First Motors" };
 
-  const title = `${car.year} ${car.brand} ${car.model} ${car.variant} for Sale in Bulandshahr | First Motors`;
+  const title =
+    car.id === "maruti-suzuki-alto-k10-vxi-2017"
+      ? "Used Maruti Suzuki Alto K10 VXI 2017/18 for Sale in Bulandshahr | First Motors"
+      : `Used ${car.brand} ${car.model} ${car.variant} ${car.year} for Sale in Bulandshahr | First Motors`;
   const description = `Buy this ${car.year} ${car.brand} ${car.model} ${car.variant} in Bulandshahr — ${formatKmExact(car.kmDriven)}, ${car.fuelType}, ${car.transmission}, ${car.ownership}. Price: ${formatPrice(car.price)}. Test drive available at First Motors, Bulandshahr.`;
 
   return {

@@ -7,15 +7,15 @@ interface CarSpecsProps {
 }
 
 export default function CarSpecs({ car }: CarSpecsProps) {
-  const specs = [
+  const rawSpecs = [
     { icon: Calendar, label: "Registration Year", value: car.registrationYear },
     { icon: Gauge, label: "KM Driven", value: formatKmExact(car.kmDriven) },
     { icon: Fuel, label: "Fuel Type", value: car.fuelType },
     { icon: Settings2, label: "Transmission", value: car.transmission },
-    { icon: Cog, label: "Engine", value: car.engine },
-    { icon: Zap, label: "Mileage", value: car.mileage },
+    car.engine ? { icon: Cog, label: "Engine", value: car.engine } : null,
+    car.mileage ? { icon: Zap, label: "Mileage", value: car.mileage } : null,
     { icon: Users, label: "Ownership", value: car.ownership },
-    { icon: Car, label: "Body Type", value: car.bodyType },
+    car.bodyType ? { icon: Car, label: "Body Type", value: car.bodyType } : null,
     { icon: Users, label: "Seating", value: `${car.seats} Seats` },
     { icon: Palette, label: "Colour", value: car.color },
     { icon: FileText, label: "Registration", value: `${car.registrationState} Registration` },
@@ -23,10 +23,14 @@ export default function CarSpecs({ car }: CarSpecsProps) {
       icon: Shield,
       label: "Insurance",
       value: car.insuranceExpiry
-        ? `${car.insuranceType || "Comprehensive"} · Valid till ${car.insuranceExpiry}`
+        ? car.insuranceExpiry.toLowerCase() === "yes" || car.insuranceExpiry.toLowerCase() === "valid"
+          ? "Valid / Active"
+          : `${car.insuranceType || "Comprehensive"} · Valid till ${car.insuranceExpiry}`
         : "Available on request",
     },
   ];
+
+  const specs = rawSpecs.filter(Boolean) as { icon: React.ComponentType<{ size: number; style?: React.CSSProperties }>; label: string; value: string | number }[];
 
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-0 divide-y divide-gray-50">

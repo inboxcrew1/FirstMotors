@@ -1,8 +1,11 @@
 "use client";
 
 import { useState, useMemo } from "react";
-import { SlidersHorizontal, X } from "lucide-react";
+import Link from "next/link";
+import { SlidersHorizontal, X, Phone, MessageSquare, Send } from "lucide-react";
 import type { CarListing, FilterState, SortOption } from "@/lib/types";
+import { SITE_CONFIG, WHATSAPP_MESSAGES } from "@/data/config";
+import { formatPhoneLink, formatWhatsAppLink } from "@/lib/utils";
 import FilterSidebar from "@/components/inventory/FilterSidebar";
 import SortBar from "@/components/inventory/SortBar";
 import CarCard from "@/components/inventory/CarCard";
@@ -43,7 +46,7 @@ export default function InventoryClient({ initialCars, availableBrands }: Invent
   const filteredAndSorted = useMemo(() => {
     let result = initialCars.filter((car) => {
       if (filters.brands.length && !filters.brands.includes(car.brand)) return false;
-      if (filters.bodyTypes.length && !filters.bodyTypes.includes(car.bodyType)) return false;
+      if (filters.bodyTypes.length && (!car.bodyType || !filters.bodyTypes.includes(car.bodyType))) return false;
       if (filters.fuelTypes.length && !filters.fuelTypes.includes(car.fuelType)) return false;
       if (filters.transmissions.length && !filters.transmissions.includes(car.transmission)) return false;
       if (filters.ownerships.length && !filters.ownerships.includes(car.ownership)) return false;
@@ -67,6 +70,52 @@ export default function InventoryClient({ initialCars, availableBrands }: Invent
   }, [initialCars, filters, sort]);
 
   const handleClearFilters = () => setFilters(DEFAULT_FILTERS);
+
+  if (initialCars.length === 0) {
+    return (
+      <div className="container-fm py-16">
+        <div
+          className="card p-8 sm:p-14 text-center max-w-xl mx-auto"
+          style={{ background: "white" }}
+        >
+          <div
+            className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
+            style={{ background: "var(--color-surface)" }}
+          >
+            <span className="text-3xl">🚗</span>
+          </div>
+          <h2
+            className="text-xl sm:text-2xl font-bold mb-2"
+            style={{ color: "var(--color-navy-900)", fontFamily: "var(--font-heading)" }}
+          >
+            Vehicles are being updated
+          </h2>
+          <p className="text-gray-600 text-sm mb-6 leading-relaxed">
+            Please contact First Motors for the latest available inventory.
+          </p>
+          <div className="flex flex-wrap gap-3 justify-center">
+            <a href={formatPhoneLink(SITE_CONFIG.phone)} className="btn btn-primary gap-2">
+              <Phone size={15} />
+              Call Us
+            </a>
+            <a
+              href={formatWhatsAppLink(SITE_CONFIG.whatsapp, WHATSAPP_MESSAGES.general)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-whatsapp gap-2"
+            >
+              <MessageSquare size={15} />
+              WhatsApp
+            </a>
+            <Link href="/contact" className="btn btn-secondary gap-2">
+              <Send size={15} />
+              Enquiry
+            </Link>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="container-fm py-6">

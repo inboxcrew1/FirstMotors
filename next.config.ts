@@ -16,6 +16,14 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  async rewrites() {
+    return [
+      {
+        source: "/used-cars/:slug",
+        destination: "/car/:slug",
+      },
+    ];
+  },
 };
 
 export default nextConfig;

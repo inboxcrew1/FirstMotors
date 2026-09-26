@@ -1,6 +1,8 @@
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Phone, MessageSquare, Send } from "lucide-react";
 import { getFeaturedCars } from "@/data/inventory";
+import { SITE_CONFIG, WHATSAPP_MESSAGES } from "@/data/config";
+import { formatPhoneLink, formatWhatsAppLink } from "@/lib/utils";
 import CarCard from "@/components/inventory/CarCard";
 
 export default function FeaturedCars() {
@@ -28,45 +30,86 @@ export default function FeaturedCars() {
               Featured Cars
             </h2>
           </div>
-          <Link
-            href="/buy"
-            className="hidden sm:flex items-center gap-1.5 text-sm font-semibold hover:gap-2.5 transition-all"
-            style={{ color: "var(--color-navy-600)" }}
-          >
-            View All Cars
-            <ArrowRight size={15} />
-          </Link>
+          {featuredCars.length > 0 && (
+            <Link
+              href="/buy"
+              className="hidden sm:flex items-center gap-1.5 text-sm font-semibold hover:gap-2.5 transition-all"
+              style={{ color: "var(--color-navy-600)" }}
+            >
+              View All Cars
+              <ArrowRight size={15} />
+            </Link>
+          )}
         </div>
 
-        {/* Car grid */}
+        {/* Car grid / Empty state */}
         {featuredCars.length > 0 ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {featuredCars.map((car) => (
-              <CarCard key={car.id} car={car} />
-            ))}
-          </div>
+          <>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+              {featuredCars.map((car) => (
+                <CarCard key={car.id} car={car} />
+              ))}
+            </div>
+
+            {/* Mobile: View all button */}
+            <div className="flex justify-center mt-8 sm:hidden">
+              <Link href="/buy" className="btn btn-secondary gap-2">
+                View All Cars
+                <ArrowRight size={16} />
+              </Link>
+            </div>
+
+            {/* Desktop: bottom CTA */}
+            <div className="hidden sm:flex justify-center mt-10">
+              <Link href="/buy" className="btn btn-secondary gap-2 px-8">
+                Browse Full Inventory
+                <ArrowRight size={16} />
+              </Link>
+            </div>
+          </>
         ) : (
-          <div className="text-center py-16 text-gray-400">
-            <p>New cars coming soon. Check back shortly.</p>
+          <div
+            className="card p-8 sm:p-12 text-center max-w-xl mx-auto"
+            style={{ background: "white" }}
+          >
+            <div
+              className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
+              style={{ background: "var(--color-surface)" }}
+            >
+              <span className="text-3xl">🚗</span>
+            </div>
+            <h3
+              className="text-xl sm:text-2xl font-bold mb-2"
+              style={{ color: "var(--color-navy-900)", fontFamily: "var(--font-heading)" }}
+            >
+              Vehicles are being updated
+            </h3>
+            <p className="text-gray-600 text-sm mb-6 leading-relaxed">
+              Please contact First Motors for the latest available inventory.
+            </p>
+            <div className="flex flex-wrap gap-3 justify-center">
+              <a href={formatPhoneLink(SITE_CONFIG.phone)} className="btn btn-primary gap-2">
+                <Phone size={15} />
+                Call Us
+              </a>
+              <a
+                href={formatWhatsAppLink(SITE_CONFIG.whatsapp, WHATSAPP_MESSAGES.general)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-whatsapp gap-2"
+              >
+                <MessageSquare size={15} />
+                WhatsApp
+              </a>
+              <Link href="/contact" className="btn btn-secondary gap-2">
+                <Send size={15} />
+                Enquiry
+              </Link>
+            </div>
           </div>
         )}
-
-        {/* Mobile: View all button */}
-        <div className="flex justify-center mt-8 sm:hidden">
-          <Link href="/buy" className="btn btn-secondary gap-2">
-            View All Cars
-            <ArrowRight size={16} />
-          </Link>
-        </div>
-
-        {/* Desktop: bottom CTA */}
-        <div className="hidden sm:flex justify-center mt-10">
-          <Link href="/buy" className="btn btn-secondary gap-2 px-8">
-            Browse Full Inventory
-            <ArrowRight size={16} />
-          </Link>
-        </div>
       </div>
     </section>
   );
 }
+

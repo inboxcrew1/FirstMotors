@@ -83,7 +83,7 @@ function toggle<T>(arr: T[], value: T): T[] {
 
 // ─── Constant option lists ─────────────────────────────────────────────────────
 const BODY_TYPES: BodyType[] = ["Hatchback", "Sedan", "SUV", "MUV", "Coupe", "Convertible", "Pickup", "Van"];
-const FUEL_TYPES: FuelType[] = ["Petrol", "Diesel", "CNG", "Electric", "Hybrid"];
+const FUEL_TYPES: FuelType[] = ["Petrol", "Diesel", "CNG", "Petrol + CNG", "Electric", "Hybrid"];
 const TRANSMISSIONS: TransmissionType[] = ["Manual", "Automatic", "AMT", "DCT", "CVT"];
 const OWNERSHIPS: OwnershipType[] = ["1st Owner", "2nd Owner", "3rd Owner", "4th+ Owner"];
 

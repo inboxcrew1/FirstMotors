@@ -63,7 +63,7 @@ export const SITE_CONFIG = {
   logo: "/logo.png",
   logoWhite: "/logo-white.png",
 
-  ogImage: "/cars/swift-2020-white/01-front.jpg",
+  ogImage: "/showroom.jpg",
 };
 
 export const WHATSAPP_MESSAGES = {
