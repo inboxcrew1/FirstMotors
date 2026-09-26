@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   },
 };
 
-export const FAQS = [
+const FAQS = [
   {
     category: "Buying a Car in Bulandshahr",
     items: [
