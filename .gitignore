@@ -39,3 +39,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# demo / development assets (not needed in production)
+/public/demo-inventory/
+
+# AI agent dev files
+AGENTS.md
+CLAUDE.md

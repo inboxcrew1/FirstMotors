@@ -1,4 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# First Motors — Used Car Dealer Website
+
+Official website for **First Motors**, a trusted pre-owned car dealer located in Bulandshahr, Uttar Pradesh, India.
+
+**Live site:** [https://firstmotorsbsr.com](https://firstmotorsbsr.com)
+
+## Tech Stack
+
+- [Next.js 16](https://nextjs.org) — React framework (App Router)
+- TypeScript
+- Tailwind CSS v4
+- Deployed on Hostinger (Node.js hosting)
+
+## Development
+
+```bash
+npm install
+npm run dev        # Development server on http://localhost:3001
+npm run build      # Production build
+npm run start      # Start production server
+```
+
+## Environment Variables
+
+Create a `.env.local` file (never commit this file):
+
+```
+# Google Analytics 4 (get from analytics.google.com)
+NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX
+```
+
+Optional email notifications (for lead form submissions):
+```
+# Resend email service API key
+RESEND_API_KEY=re_XXXXXXXXXX
+```
+
+## Project Structure
+
+```
+app/           — Next.js App Router pages
+components/    — Reusable UI components
+data/          — Business config and vehicle inventory
+lib/           — Utility functions and type definitions
+public/        — Static assets (logos, vehicle images, showroom photo)
+```
+
+## Key Configuration
+
+All business details (name, phone, address, social links) are centralised in `data/config.ts`.
+
+Vehicle inventory is managed in `data/inventory.ts`.
+
+## Deployment (Hostinger)
+
+1. Push to GitHub
+2. Connect GitHub repo in Hostinger → Node.js hosting panel
+3. Set environment variables in Hostinger control panel
+4. Build command: `npm run build`
+5. Start command: `npm run start`
+
 
 ## Getting Started
 
