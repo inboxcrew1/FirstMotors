@@ -89,7 +89,7 @@ export default function HeroSection() {
             </h1>
 
             <p className="text-base sm:text-lg text-slate-300 mb-8 max-w-lg leading-relaxed">
-              Quality second-hand cars, transparent pricing and a simpler way to buy, sell or exchange your car in Bulandshahr and Western U.P.
+              First Motors has 100+ vehicles available at our Bulandshahr showroom, while our website showcases a selected online inventory. 10+ years of trusted automotive service, transparent pricing, and easy ownership.
             </p>
 
             {/* CTA Buttons */}
@@ -119,9 +119,10 @@ export default function HeroSection() {
             {/* Trust micro-stats */}
             <div className="flex flex-wrap gap-6 mt-10 pt-8" style={{ borderTop: "1px solid rgba(255,255,255,0.1)" }}>
               {[
-                { value: "100+", label: "Cars in Stock" },
+                { value: "10+", label: "Years Experience" },
+                { value: "100+", label: "Showroom Stock" },
                 { value: "500+", label: "Happy Customers" },
-                { value: "5★", label: "Avg. Rating" },
+                { value: "5.0 ★", label: "Confirmed Rating" },
               ].map((stat) => (
                 <div key={stat.label}>
                   <p className="text-2xl font-extrabold text-white" style={{ fontFamily: "var(--font-heading)" }}>

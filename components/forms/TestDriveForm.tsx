@@ -6,6 +6,7 @@ import type { CarListing } from "@/lib/types";
 
 interface TestDriveFormProps {
   cars: CarListing[];
+  initialCarStockId?: string;
 }
 
 const TIME_SLOTS = [
@@ -15,9 +16,14 @@ const TIME_SLOTS = [
   "Evening (5 PM – 7 PM)",
 ];
 
-export default function TestDriveForm({ cars }: TestDriveFormProps) {
+export default function TestDriveForm({ cars, initialCarStockId = "" }: TestDriveFormProps) {
+  const matchingCar = cars.find((c) => c.stockId === initialCarStockId);
+  const defaultCarValue = matchingCar
+    ? `${matchingCar.year} ${matchingCar.brand} ${matchingCar.model} (${matchingCar.stockId})`
+    : "";
+
   const [form, setForm] = useState({
-    car: "",
+    car: defaultCarValue,
     name: "",
     phone: "",
     whatsapp: "",

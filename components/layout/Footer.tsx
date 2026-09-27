@@ -243,17 +243,31 @@ export default function Footer() {
         className="border-t"
         style={{ borderColor: "#1a2a50" }}
       >
-        <div className="container-fm py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-xs" style={{ color: "#6b7280" }}>
+        <div className="container-fm py-6 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
+          <p className="text-xs" style={{ color: "#9ca3af" }}>
             © {new Date().getFullYear()} First Motors. All rights reserved.
           </p>
+
+          {/* Centered stylish attribution */}
+          <div className="text-xs font-medium" style={{ color: "#9ca3af" }}>
+            Designed &amp; Developed by{" "}
+            <a
+              href="https://inboxcrew.in/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-white transition-all duration-200 hover:text-red-400 inline-flex items-center gap-1 px-2.5 py-0.5 rounded bg-white/5 border border-white/10 hover:border-red-500/40 hover:bg-red-500/10 shadow-sm"
+            >
+              InboxCrew
+            </a>
+          </div>
+
           <div className="flex items-center gap-4">
             {FOOTER_LINKS.legal.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 className="text-xs hover:text-white transition-colors"
-                style={{ color: "#6b7280" }}
+                style={{ color: "#9ca3af" }}
               >
                 {link.label}
               </Link>

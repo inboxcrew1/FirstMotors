@@ -1,12 +1,40 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Phone, Mail, MapPin, Clock, ExternalLink } from "lucide-react";
 import { SITE_CONFIG, WHATSAPP_MESSAGES } from "@/data/config";
 import { formatPhoneLink, formatWhatsAppLink } from "@/lib/utils";
 import ContactForm from "@/components/forms/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Contact Us | First Motors",
-  description: "Get in touch with First Motors. Call, WhatsApp, email or visit our showroom. We're here to help with buying, selling, finance and more.",
+  title: "Contact First Motors | Used Car Dealer in Bulandshahr",
+  description:
+    "Get in touch with First Motors showroom in Bulandshahr, UP. Call Sharif Ansari (8267871486) or Shamir Khan (9953950721). Visit us on Chandpur Road, near Kalyan Singh Rajkiya Medical College.",
+  alternates: {
+    canonical: "https://firstmotorsbsr.com/contact",
+  },
+  openGraph: {
+    type: "website",
+    url: "https://firstmotorsbsr.com/contact",
+    siteName: SITE_CONFIG.name,
+    title: "Contact First Motors | Used Car Dealer in Bulandshahr",
+    description: "Contact First Motors showroom in Bulandshahr. Call 8267871486 or 9953950721. Visit us on Chandpur Road for pre-owned cars.",
+    images: [{ url: `${SITE_CONFIG.url}/showroom.jpg`, alt: "First Motors Showroom Bulandshahr" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact First Motors | Bulandshahr",
+    description: "Contact First Motors showroom in Bulandshahr. Call or WhatsApp Sharif Ansari and Shamir Khan.",
+    images: [`${SITE_CONFIG.url}/showroom.jpg`],
+  },
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://firstmotorsbsr.com" },
+    { "@type": "ListItem", position: 2, name: "Contact First Motors Bulandshahr", item: "https://firstmotorsbsr.com/contact" },
+  ],
 };
 
 export default function ContactPage() {
@@ -14,13 +42,26 @@ export default function ContactPage() {
 
   return (
     <div style={{ background: "var(--color-surface)", minHeight: "100vh" }}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+
       {/* Header */}
       <div style={{ background: "var(--color-navy-900)" }}>
         <div className="container-fm py-10 text-center">
+          <nav className="text-xs text-slate-400 mb-3" aria-label="breadcrumb">
+            <ol className="flex items-center justify-center gap-1.5">
+              <li><Link href="/" className="hover:text-white transition-colors">Home</Link></li>
+              <li>/</li>
+              <li className="text-white font-medium">Contact</li>
+            </ol>
+          </nav>
+          <p className="text-xs font-bold uppercase tracking-widest mb-2" style={{ color: "var(--color-red-brand-light)" }}>Get in Touch</p>
           <h1 className="text-3xl sm:text-4xl font-extrabold text-white" style={{ fontFamily: "var(--font-heading)" }}>
-            Contact First Motors
+            Contact First Motors Bulandshahr
           </h1>
-          <p className="text-slate-300 mt-2">We&apos;re here to help. Reach us any way you prefer.</p>
+          <p className="text-slate-300 mt-2 text-sm sm:text-base">We are here to assist with car buying, selling, exchange, finance, and test drives.</p>
         </div>
       </div>
 
@@ -30,7 +71,7 @@ export default function ContactPage() {
           <div className="flex flex-col gap-5">
             <div className="card p-6">
               <h2 className="text-xl font-bold mb-5" style={{ color: "var(--color-navy-900)", fontFamily: "var(--font-heading)" }}>
-                Get in Touch
+                Dealership Contact Details
               </h2>
               <div className="space-y-4">
                 <div className="flex items-start gap-4">
@@ -79,7 +120,7 @@ export default function ContactPage() {
                       rel="noopener noreferrer"
                       className="text-xs font-semibold text-blue-600 hover:underline mt-1 inline-flex items-center gap-1"
                     >
-                      Get Directions on Maps <ExternalLink size={11} />
+                      Get Directions on Google Maps <ExternalLink size={11} />
                     </a>
                   </div>
                 </div>
@@ -110,19 +151,14 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* Map placeholder */}
+            {/* Map */}
             <div className="rounded-xl overflow-hidden" style={{ height: "240px", background: "#f1f5f9", border: "1px solid #e2e8f0" }}>
               {SITE_CONFIG.address.googleMapsEmbed ? (
-                <iframe src={SITE_CONFIG.address.googleMapsEmbed} width="100%" height="100%" style={{ border: 0 }} allowFullScreen loading="lazy" title="First Motors location" />
+                <iframe src={SITE_CONFIG.address.googleMapsEmbed} width="100%" height="100%" style={{ border: 0 }} allowFullScreen loading="lazy" title="First Motors Bulandshahr Location" />
               ) : (
                 <div className="flex flex-col items-center justify-center h-full gap-2 text-gray-400">
                   <MapPin size={36} strokeWidth={1.5} />
                   <p className="text-sm">{SITE_CONFIG.address.full}</p>
-                  {SITE_CONFIG.address.googleMapsUrl && (
-                    <a href={SITE_CONFIG.address.googleMapsUrl} target="_blank" rel="noopener noreferrer" className="btn btn-outline text-sm mt-1">
-                      Open in Maps <ExternalLink size={13} className="ml-1" />
-                    </a>
-                  )}
                 </div>
               )}
             </div>

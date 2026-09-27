@@ -38,19 +38,20 @@ export const SITE_CONFIG = {
 
   // Dealership Showroom Address
   address: {
-    line1: "Chandpur Road, Kalyan Singh Medical College",
+    line1: "Chandpur Road, near Kalyan Singh Rajkiya Medical College",
     city: "Bulandshahr",
     state: "Uttar Pradesh",
     pincode: "203001",
-    full: "Chandpur Road, Kalyan Singh Medical College, Bulandshahr, U.P. – 203001",
+    country: "India",
+    full: "Chandpur Road, near Kalyan Singh Rajkiya Medical College, Bulandshahr, Uttar Pradesh - 203001, India",
     googleMapsUrl: "https://www.google.com/maps/search/?api=1&query=Chandpur+Road+Kalyan+Singh+Medical+College+Bulandshahr+203001",
     googleMapsEmbed: "https://maps.google.com/maps?q=Kalyan+Singh+Medical+College+Chandpur+Road+Bulandshahr+Uttar+Pradesh&t=&z=14&ie=UTF8&iwloc=&output=embed",
   },
 
   social: {
-    instagram: "https://www.instagram.com/firstmotors",
-    facebook: "https://www.facebook.com/firstmotors",
-    youtube: "https://www.youtube.com/@firstmotors",
+    instagram: "https://www.instagram.com/first_motors_bulandshahr_/",
+    facebook: "",
+    youtube: "",
   },
 
   hours: {

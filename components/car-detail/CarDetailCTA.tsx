@@ -21,12 +21,12 @@ export default function CarDetailCTA({ car, whatsappLink }: CarDetailCTAProps) {
       <p className="text-xs text-gray-400 font-medium mb-0.5">Stock ID: {car.stockId}</p>
 
       {/* Car name */}
-      <h1
+      <div
         className="text-xl font-extrabold leading-tight mb-1"
         style={{ color: "var(--color-navy-900)", fontFamily: "var(--font-heading)" }}
       >
         {car.year} {car.brand} {car.model}
-      </h1>
+      </div>
       <p className="text-sm text-gray-500 mb-4">{car.variant}</p>
 
       {/* Price */}

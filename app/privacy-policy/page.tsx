@@ -3,6 +3,15 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Privacy Policy | First Motors",
   description: "Privacy Policy for First Motors website — how we collect, use and protect your personal information.",
+  alternates: {
+    canonical: "https://firstmotorsbsr.com/privacy-policy",
+  },
+  openGraph: {
+    type: "website",
+    url: "https://firstmotorsbsr.com/privacy-policy",
+    title: "Privacy Policy | First Motors",
+    description: "Privacy Policy for First Motors website.",
+  },
 };
 
 // TODO: Have this reviewed by a qualified legal professional before going live.

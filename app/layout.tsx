@@ -46,6 +46,19 @@ export const metadata: Metadata = {
   alternates: {
     canonical: SITE_CONFIG.url,
   },
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
+      { url: "/icon-512.png", sizes: "512x512", type: "image/png" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+    shortcut: ["/favicon.ico"],
+  },
   openGraph: {
     type: "website",
     locale: "en_IN",
@@ -53,7 +66,7 @@ export const metadata: Metadata = {
     siteName: SITE_CONFIG.name,
     title: "Used Cars in Bulandshahr | First Motors — Second Hand Car Dealer",
     description:
-      "First Motors is Bulandshahr's trusted used car dealer. Buy quality second-hand cars with transparent pricing, easy finance & test drives.",
+      "First Motors is Bulandshahr's trusted used car dealer. 100+ pre-owned cars available at our Chandpur Road showroom. Transparent pricing, easy finance & test drives.",
     images: [
       {
         url: SITE_CONFIG.ogImage,
@@ -67,7 +80,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Used Cars in Bulandshahr | First Motors",
     description:
-      "First Motors is Bulandshahr's trusted used car dealer. Transparent pricing, easy finance & test drives.",
+      "First Motors is Bulandshahr's trusted used car dealer. 100+ pre-owned cars available at our showroom. Transparent pricing, easy finance & test drives.",
     images: [SITE_CONFIG.ogImage],
   },
   robots: {
@@ -91,8 +104,9 @@ const localBusinessSchema = {
   name: SITE_CONFIG.name,
   legalName: "First Motors",
   description:
-    "First Motors is a trusted pre-owned car dealer in Bulandshahr, Uttar Pradesh. We offer quality second-hand cars with transparent pricing, easy finance options and test drives.",
+    "First Motors is Bulandshahr's trusted pre-owned car dealership with 10+ years of experience and 100+ vehicles available at our Chandpur Road showroom. We offer quality second-hand cars with transparent pricing, easy finance options and verified test drives.",
   url: SITE_CONFIG.url,
+  foundingDate: "2014",
   logo: {
     "@type": "ImageObject",
     url: `${SITE_CONFIG.url}/logo.png`,
@@ -109,11 +123,6 @@ const localBusinessSchema = {
     addressRegion: "Uttar Pradesh",
     postalCode: SITE_CONFIG.address.pincode,
     addressCountry: "IN",
-  },
-  geo: {
-    "@type": "GeoCoordinates",
-    latitude: 28.4069,
-    longitude: 77.8494,
   },
   openingHoursSpecification: [
     {
@@ -134,12 +143,11 @@ const localBusinessSchema = {
     { "@type": "City", name: "Bulandshahr" },
     { "@type": "State", name: "Uttar Pradesh" },
   ],
-  knowsAbout: ["Used Cars", "Pre-Owned Cars", "Second-Hand Cars", "Car Finance", "Car Exchange"],
+  knowsAbout: ["Used Cars", "Pre-Owned Cars", "Second-Hand Cars", "Car Finance", "Car Exchange", "Car Inspection"],
   sameAs: [
     SITE_CONFIG.social.instagram,
-    SITE_CONFIG.social.facebook,
-    SITE_CONFIG.social.youtube,
-  ],
+    "https://share.google/tzmypB0SIAU6WAyzR",
+  ].filter(Boolean),
   hasMap: SITE_CONFIG.address.googleMapsUrl,
 };
 
@@ -149,16 +157,8 @@ const websiteSchema = {
   "@id": `${SITE_CONFIG.url}/#website`,
   name: SITE_CONFIG.name,
   url: SITE_CONFIG.url,
-  description: "Used car dealer in Bulandshahr — buy, sell or exchange pre-owned cars.",
+  description: "Used car dealer in Bulandshahr — buy, sell or exchange pre-owned cars. 100+ cars available in showroom.",
   publisher: { "@id": `${SITE_CONFIG.url}/#business` },
-  potentialAction: {
-    "@type": "SearchAction",
-    target: {
-      "@type": "EntryPoint",
-      urlTemplate: `${SITE_CONFIG.url}/buy?q={search_term_string}`,
-    },
-    "query-input": "required name=search_term_string",
-  },
 };
 
 export default function RootLayout({
@@ -179,17 +179,19 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap"
           rel="stylesheet"
         />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <meta name="theme-color" content="#0F1C3F" />
         <meta name="geo.region" content="IN-UP" />
         <meta name="geo.placename" content="Bulandshahr, Uttar Pradesh, India" />
-        <meta name="geo.position" content="28.4069;77.8494" />
-        <meta name="ICBM" content="28.4069, 77.8494" />
         {/* AutomotiveBusiness / LocalBusiness Schema */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
         />
-        {/* WebSite Schema with SearchAction */}
+        {/* WebSite Schema */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}

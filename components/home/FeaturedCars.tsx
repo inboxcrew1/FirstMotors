@@ -29,6 +29,9 @@ export default function FeaturedCars() {
             >
               Featured Cars
             </h2>
+            <p className="text-sm text-gray-500 mt-1 max-w-xl">
+              Selected quality pre-owned cars available online. First Motors has <strong>100+ vehicles</strong> available in physical showroom stock on Chandpur Road, Bulandshahr.
+            </p>
           </div>
           {featuredCars.length > 0 && (
             <Link

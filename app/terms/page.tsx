@@ -3,6 +3,15 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Terms & Conditions | First Motors",
   description: "Terms and Conditions for use of the First Motors website.",
+  alternates: {
+    canonical: "https://firstmotorsbsr.com/terms",
+  },
+  openGraph: {
+    type: "website",
+    url: "https://firstmotorsbsr.com/terms",
+    title: "Terms & Conditions | First Motors",
+    description: "Terms and Conditions for use of the First Motors website.",
+  },
 };
 
 // TODO: Have this reviewed by a qualified legal professional before going live.

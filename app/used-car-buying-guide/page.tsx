@@ -9,6 +9,29 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://firstmotorsbsr.com/used-car-buying-guide",
   },
+  openGraph: {
+    type: "article",
+    url: "https://firstmotorsbsr.com/used-car-buying-guide",
+    siteName: SITE_CONFIG.name,
+    title: "Used Car Buying Guide Bulandshahr | First Motors",
+    description: "Complete guide to buying a used car in Bulandshahr. Inspection checklist, documents, RC transfer, and finance advice.",
+    images: [{ url: `${SITE_CONFIG.url}/showroom.jpg`, alt: "Used Car Buying Guide First Motors Bulandshahr" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Used Car Buying Guide Bulandshahr | First Motors",
+    description: "Complete guide to buying a used car in Bulandshahr. Inspection, documents, and RC transfer.",
+    images: [`${SITE_CONFIG.url}/showroom.jpg`],
+  },
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://firstmotorsbsr.com" },
+    { "@type": "ListItem", position: 2, name: "Used Car Buying Guide", item: "https://firstmotorsbsr.com/used-car-buying-guide" },
+  ],
 };
 
 const faqSchema = {
@@ -99,6 +122,10 @@ export default function BuyingGuidePage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
       <div style={{ background: "var(--color-navy-900)" }}>

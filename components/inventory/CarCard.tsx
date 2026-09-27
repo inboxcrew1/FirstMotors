@@ -46,7 +46,7 @@ export default function CarCard({ car, className = "" }: CarCardProps) {
       <div className="relative overflow-hidden" style={{ height: "200px" }}>
         <Image
           src={car.thumbnailUrl}
-          alt={`${car.year} ${car.brand} ${car.model} ${car.variant}`}
+          alt={`${car.year} ${car.brand} ${car.model} ${car.variant} at First Motors Bulandshahr`}
           fill
           className="object-cover transition-transform duration-500 group-hover:scale-105"
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"

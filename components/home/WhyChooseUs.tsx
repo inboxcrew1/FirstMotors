@@ -51,7 +51,7 @@ export default function WhyChooseUs() {
             Why Buy From First Motors?
           </h2>
           <p className="text-gray-500 max-w-2xl mx-auto">
-            We believe buying a used car should be simple, transparent and stress-free.
+            With 10+ years of automotive experience, 100+ vehicles available at our Bulandshahr showroom, and 500+ satisfied customers, we make pre-owned car buying simple and transparent.
           </p>
         </div>
 
