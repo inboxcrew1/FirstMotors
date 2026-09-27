@@ -67,7 +67,7 @@ const faqSchema = {
       name: "Where can I buy a reliable used car in Bulandshahr?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "First Motors on Chandpur Road (near Kalyan Singh Medical College, Bulandshahr) offers quality pre-owned cars with transparent pricing. Contact: Sharif Ansari 8267871486 or Shamir Khan 9953950721.",
+        text: "First Motors on Chandpur Road (near Kalyan Singh Medical College, Bulandshahr) offers quality pre-owned cars with transparent pricing. Contact: Shariq Ansari 8267871486 or Shamir Khan 9953950721.",
       },
     },
     {

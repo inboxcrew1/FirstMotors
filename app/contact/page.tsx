@@ -8,7 +8,7 @@ import ContactForm from "@/components/forms/ContactForm";
 export const metadata: Metadata = {
   title: "Contact First Motors | Used Car Dealer in Bulandshahr",
   description:
-    "Get in touch with First Motors showroom in Bulandshahr, UP. Call Sharif Ansari (8267871486) or Shamir Khan (9953950721). Visit us on Chandpur Road, near Kalyan Singh Rajkiya Medical College.",
+    "Get in touch with First Motors showroom in Bulandshahr, UP. Call Shariq Ansari (8267871486) or Shamir Khan (9953950721). Visit us on Chandpur Road, near Kalyan Singh Rajkiya Medical College.",
   alternates: {
     canonical: "https://firstmotorsbsr.com/contact",
   },
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Contact First Motors | Bulandshahr",
-    description: "Contact First Motors showroom in Bulandshahr. Call or WhatsApp Sharif Ansari and Shamir Khan.",
+    description: "Contact First Motors showroom in Bulandshahr. Call or WhatsApp Shariq Ansari and Shamir Khan.",
     images: [`${SITE_CONFIG.url}/showroom.jpg`],
   },
 };
@@ -82,7 +82,7 @@ export default function ContactPage() {
                     <p className="text-xs text-gray-400 font-medium mb-1">Direct Dealership Contacts</p>
                     <div className="space-y-1.5">
                       <div className="flex items-center gap-2">
-                        <span className="text-sm font-semibold text-gray-900">Sharif Ansari:</span>
+                        <span className="text-sm font-semibold text-gray-900">Shariq Ansari:</span>
                         <a href="tel:+918267871486" className="text-sm font-bold text-navy-800 hover:text-red-600">82678 71486</a>
                         <a href="https://wa.me/918267871486" target="_blank" rel="noopener noreferrer" className="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded font-medium">WhatsApp</a>
                       </div>
@@ -132,8 +132,8 @@ export default function ContactPage() {
                   <div>
                     <p className="text-xs text-gray-400 font-medium mb-0.5">Showroom Hours</p>
                     <div className="text-sm text-gray-700 space-y-0.5">
-                      <p>Mon–Sat: {SITE_CONFIG.hours.weekdays}</p>
-                      <p>Sunday: {SITE_CONFIG.hours.sunday}</p>
+                      <p className="font-semibold text-emerald-700">Open All 7 Days</p>
+                      <p>Monday – Sunday: 9:30 AM – 7:30 PM</p>
                     </div>
                   </div>
                 </div>

@@ -11,7 +11,7 @@ export const SITE_CONFIG = {
     "Quality pre-owned cars, transparent pricing and a simpler way to buy, sell or exchange your car in Bulandshahr and Western UP.",
   url: "https://firstmotorsbsr.com",
 
-  // Primary contacts (Sharif Ansari: 8267871486 / Shamir Khan: 9953950721)
+  // Primary contacts (Shariq Ansari: 8267871486 / Shamir Khan: 9953950721)
   phone: "+918267871486",
   phoneDisplay: "+91 82678 71486",
   whatsapp: "+918267871486",
@@ -21,7 +21,7 @@ export const SITE_CONFIG = {
   // Dealership Team / Key Contacts
   contacts: [
     {
-      name: "Sharif Ansari",
+      name: "Shariq Ansari",
       phone: "+918267871486",
       phoneDisplay: "+91 82678 71486",
       whatsapp: "+918267871486",
@@ -57,7 +57,8 @@ export const SITE_CONFIG = {
   hours: {
     weekdays: "9:30 AM – 7:30 PM",
     saturday: "9:30 AM – 7:30 PM",
-    sunday: "10:00 AM – 6:00 PM",
+    sunday: "9:30 AM – 7:30 PM",
+    allDays: "9:30 AM – 7:30 PM (All 7 Days)",
   },
 
   // Official Logo Assets

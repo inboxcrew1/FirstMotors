@@ -97,7 +97,7 @@ export default function CarDetailCTA({ car, whatsappLink }: CarDetailCTAProps) {
       <div className="mt-4 pt-3 border-t border-gray-100 text-xs text-gray-500">
         <p className="font-semibold text-gray-700 mb-1">Showroom Representatives:</p>
         <div className="flex justify-between items-center py-0.5">
-          <span>Sharif Ansari</span>
+          <span>Shariq Ansari</span>
           <a href="tel:+918267871486" className="font-bold text-navy-800 hover:text-red-600">82678 71486</a>
         </div>
         <div className="flex justify-between items-center py-0.5">

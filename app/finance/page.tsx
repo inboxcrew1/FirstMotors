@@ -158,7 +158,7 @@ export default function FinancePage() {
             Have Questions About Car Finance in Bulandshahr?
           </h2>
           <p className="text-slate-300 text-sm mb-6 max-w-lg mx-auto">
-            Contact Sharif Ansari or Shamir Khan at First Motors to discuss available financing options. We do not claim 0% interest or guaranteed approvals — we offer transparent assistance with legitimate lenders.
+            Contact Shariq Ansari or Shamir Khan at First Motors to discuss available financing options. We do not claim 0% interest or guaranteed approvals — we offer transparent assistance with legitimate lenders.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="btn btn-whatsapp gap-2 px-8">

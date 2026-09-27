@@ -159,7 +159,7 @@ export default function LocationSection() {
                     <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1">Showroom Contacts</p>
                     <div className="space-y-1.5">
                       <div className="flex items-center gap-2 text-sm">
-                        <span className="font-semibold text-gray-900">Sharif Ansari:</span>
+                        <span className="font-semibold text-gray-900">Shariq Ansari:</span>
                         <a
                           href="tel:+918267871486"
                           className="font-medium text-navy-800 hover:text-red-600 transition-colors"
@@ -190,9 +190,8 @@ export default function LocationSection() {
                   <div>
                     <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1">Business Hours</p>
                     <div className="space-y-0.5 text-sm text-gray-700">
-                      <p>Mon – Fri: {SITE_CONFIG.hours.weekdays}</p>
-                      <p>Saturday: {SITE_CONFIG.hours.saturday}</p>
-                      <p>Sunday: {SITE_CONFIG.hours.sunday}</p>
+                      <p className="font-semibold text-emerald-700">Open All 7 Days</p>
+                      <p>Monday – Sunday: 9:30 AM – 7:30 PM</p>
                     </div>
                   </div>
                 </div>

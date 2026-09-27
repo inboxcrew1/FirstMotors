@@ -33,7 +33,7 @@ const FAQS = [
     items: [
       {
         q: "Where can I buy a reliable used car in Bulandshahr?",
-        a: "First Motors is a trusted pre-owned car dealer located on Chandpur Road, near Kalyan Singh Rajkiya Medical College, Bulandshahr, UP – 203001. We maintain 100+ vehicles at our physical showroom while featuring a selected inventory online. Call Sharif Ansari at 8267871486 or Shamir Khan at 9953950721 for assistance.",
+        a: "First Motors is a trusted pre-owned car dealer located on Chandpur Road, near Kalyan Singh Rajkiya Medical College, Bulandshahr, UP – 203001. We maintain 100+ vehicles at our physical showroom while featuring a selected inventory online. Call Shariq Ansari at 8267871486 or Shamir Khan at 9953950721 for assistance.",
       },
       {
         q: "How many cars are available at First Motors showroom?",
@@ -137,11 +137,11 @@ const FAQS = [
       },
       {
         q: "What are your business operating hours?",
-        a: "Monday to Saturday: 9:30 AM – 7:30 PM. Sunday: 10:00 AM – 6:00 PM.",
+        a: "Monday to Sunday: 9:30 AM – 7:30 PM (Open all 7 days).",
       },
       {
         q: "How can I directly contact First Motors representatives?",
-        a: "You can call or WhatsApp Sharif Ansari at 8267871486 or Shamir Khan at 9953950721. You can also visit our showroom on Chandpur Road, Bulandshahr.",
+        a: "You can call or WhatsApp Shariq Ansari at 8267871486 or Shamir Khan at 9953950721. You can also visit our showroom on Chandpur Road, Bulandshahr.",
       },
     ],
   },
@@ -216,7 +216,7 @@ export default function FAQPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center items-center mb-5">
               <a href="tel:+918267871486" className="text-sm font-semibold text-navy-900 hover:text-red-600 transition-colors">
-                📞 Sharif Ansari: 82678 71486
+                📞 Shariq Ansari: 82678 71486
               </a>
               <span className="hidden sm:inline text-gray-300">|</span>
               <a href="tel:+919953950721" className="text-sm font-semibold text-navy-900 hover:text-red-600 transition-colors">

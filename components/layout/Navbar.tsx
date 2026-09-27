@@ -251,7 +251,7 @@ export default function Navbar() {
               <p className="text-[10px] font-bold text-gray-500 uppercase tracking-wider">Direct Dealership Contacts</p>
               <div className="space-y-1 text-xs">
                 <a href="tel:+918267871486" className="flex items-center justify-between text-gray-700 font-semibold hover:text-navy-900">
-                  <span>Sharif Ansari</span>
+                  <span>Shariq Ansari</span>
                   <span className="text-gray-500 font-medium">82678 71486</span>
                 </a>
                 <a href="tel:+919953950721" className="flex items-center justify-between text-gray-700 font-semibold hover:text-navy-900">

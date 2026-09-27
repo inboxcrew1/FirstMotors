@@ -73,7 +73,7 @@ export default function Footer() {
                     className="flex items-center gap-2 hover:text-white transition-colors group"
                   >
                     <Phone size={14} className="text-red-400 flex-shrink-0" />
-                    <span className="font-semibold text-white">Sharif Ansari:</span>
+                    <span className="font-semibold text-white">Shariq Ansari:</span>
                     <span className="text-gray-300">82678 71486</span>
                   </a>
                   <a
@@ -197,9 +197,8 @@ export default function Footer() {
                 Business Hours
               </h4>
               <div className="space-y-1 text-sm" style={{ color: "#9ca3af" }}>
-                <p>Mon–Fri: {SITE_CONFIG.hours.weekdays}</p>
-                <p>Saturday: {SITE_CONFIG.hours.saturday}</p>
-                <p>Sunday: {SITE_CONFIG.hours.sunday}</p>
+                <p className="text-white font-medium">Open All 7 Days</p>
+                <p>Mon – Sun: 9:30 AM – 7:30 PM</p>
               </div>
             </div>
           </div>
