@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_CONFIG.url),
   title: {
     default: "Used Cars in Bulandshahr | First Motors — Second Hand Car Dealer",
-    template: `%s | First Motors`,
+    template: "%s",
   },
   description:
     "First Motors is Bulandshahr's trusted used car dealer. Buy, sell or exchange quality second-hand cars in Bulandshahr, UP. Transparent pricing, easy finance & test drives available.",
