@@ -36,12 +36,7 @@ const breadcrumbSchema = {
   ],
 };
 
-interface TestDrivePageProps {
-  searchParams?: Promise<{ car?: string }>;
-}
-
-export default async function TestDrivePage({ searchParams }: TestDrivePageProps) {
-  const sp = searchParams ? await searchParams : {};
+export default function TestDrivePage() {
   const cars = getAllCars().filter((c) => c.status === "available");
 
   return (
@@ -74,7 +69,7 @@ export default async function TestDrivePage({ searchParams }: TestDrivePageProps
       {/* Form */}
       <div className="container-fm py-10">
         <div className="max-w-lg mx-auto">
-          <TestDriveForm cars={cars} initialCarStockId={sp.car || ""} />
+          <TestDriveForm cars={cars} />
         </div>
       </div>
 

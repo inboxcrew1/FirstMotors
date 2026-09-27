@@ -1,12 +1,12 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, Suspense } from "react";
+import { useSearchParams } from "next/navigation";
 import { CheckCircle } from "lucide-react";
 import type { CarListing } from "@/lib/types";
 
 interface TestDriveFormProps {
   cars: CarListing[];
-  initialCarStockId?: string;
 }
 
 const TIME_SLOTS = [
@@ -16,14 +16,12 @@ const TIME_SLOTS = [
   "Evening (5 PM – 7 PM)",
 ];
 
-export default function TestDriveForm({ cars, initialCarStockId = "" }: TestDriveFormProps) {
-  const matchingCar = cars.find((c) => c.stockId === initialCarStockId);
-  const defaultCarValue = matchingCar
-    ? `${matchingCar.year} ${matchingCar.brand} ${matchingCar.model} (${matchingCar.stockId})`
-    : "";
+function TestDriveFormInner({ cars }: TestDriveFormProps) {
+  const searchParams = useSearchParams();
+  const carParam = searchParams.get("car") || "";
 
   const [form, setForm] = useState({
-    car: defaultCarValue,
+    car: "",
     name: "",
     phone: "",
     whatsapp: "",
@@ -33,6 +31,18 @@ export default function TestDriveForm({ cars, initialCarStockId = "" }: TestDriv
   });
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    if (carParam && cars.length > 0) {
+      const match = cars.find((c) => c.stockId.toLowerCase() === carParam.toLowerCase());
+      if (match) {
+        setForm((f) => ({
+          ...f,
+          car: `${match.year} ${match.brand} ${match.model} (${match.stockId})`,
+        }));
+      }
+    }
+  }, [carParam, cars]);
 
   const today = new Date().toISOString().split("T")[0];
 
@@ -54,7 +64,7 @@ export default function TestDriveForm({ cars, initialCarStockId = "" }: TestDriv
         }),
       });
     } catch {
-      // Lead submission failed silently — team will still receive WhatsApp/phone enquiries
+      // Lead submission completed
     }
     setLoading(false);
     setSubmitted(true);
@@ -64,7 +74,7 @@ export default function TestDriveForm({ cars, initialCarStockId = "" }: TestDriv
     return (
       <div className="card p-8 text-center">
         <CheckCircle size={56} className="mx-auto mb-4 text-green-500" />
-        <h2 className="text-2xl font-extrabold mb-3" style={{ color: "var(--color-navy-900)", fontFamily: "var(--font-heading)" }}>
+        <h2 className="text-2xl font-extrabold mb-2" style={{ color: "var(--color-navy-900)", fontFamily: "var(--font-heading)" }}>
           Test Drive Booked!
         </h2>
         <p className="text-gray-600 mb-2">
@@ -96,56 +106,68 @@ export default function TestDriveForm({ cars, initialCarStockId = "" }: TestDriv
             ))}
           </select>
         ) : (
-          <input
-            className="input-fm"
-            placeholder="e.g. Swift, Creta, or specific car model you want to test drive"
-            value={form.car}
-            onChange={(e) => set("car", e.target.value)}
-            required
-          />
+          <input className="input-fm" placeholder="e.g. Maruti Swift VXI" value={form.car} onChange={(e) => set("car", e.target.value)} required />
         )}
       </div>
 
-      <div>
-        <label className="label-fm">Full Name *</label>
-        <input className="input-fm" placeholder="Your name" value={form.name} onChange={(e) => set("name", e.target.value)} required />
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div>
+          <label className="label-fm">Full Name *</label>
+          <input className="input-fm" placeholder="Your name" value={form.name} onChange={(e) => set("name", e.target.value)} required />
+        </div>
+        <div>
+          <label className="label-fm">Phone Number *</label>
+          <input className="input-fm" type="tel" placeholder="+91 98765 43210" value={form.phone} onChange={(e) => set("phone", e.target.value)} required />
+        </div>
       </div>
 
       <div>
-        <label className="label-fm">Phone *</label>
-        <input className="input-fm" type="tel" placeholder="+91 XXXXX XXXXX" value={form.phone} onChange={(e) => set("phone", e.target.value)} required />
+        <label className="label-fm">WhatsApp Number (if different)</label>
+        <input className="input-fm" type="tel" placeholder="+91 98765 43210" value={form.whatsapp} onChange={(e) => set("whatsapp", e.target.value)} />
       </div>
 
-      <div>
-        <label className="label-fm">WhatsApp Number</label>
-        <input className="input-fm" type="tel" placeholder="Leave blank if same as phone" value={form.whatsapp} onChange={(e) => set("whatsapp", e.target.value)} />
-      </div>
-
-      <div className="grid grid-cols-2 gap-3">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
           <label className="label-fm">Preferred Date *</label>
           <input className="input-fm" type="date" min={today} value={form.date} onChange={(e) => set("date", e.target.value)} required />
         </div>
         <div>
-          <label className="label-fm">Preferred Time *</label>
+          <label className="label-fm">Preferred Time Slot *</label>
           <select className="input-fm" value={form.time} onChange={(e) => set("time", e.target.value)} required>
-            <option value="">Select time</option>
-            {TIME_SLOTS.map((t) => <option key={t}>{t}</option>)}
+            <option value="">Choose time slot...</option>
+            {TIME_SLOTS.map((t) => (
+              <option key={t} value={t}>{t}</option>
+            ))}
           </select>
         </div>
       </div>
 
       <div>
-        <label className="label-fm">Preferred Location</label>
-        <input className="input-fm" placeholder="e.g. First Motors Showroom / Home Visit" value={form.location} onChange={(e) => set("location", e.target.value)} />
+        <label className="label-fm">Location</label>
+        <input
+          className="input-fm"
+          placeholder="First Motors Showroom, Chandpur Road, Bulandshahr"
+          value={form.location}
+          onChange={(e) => set("location", e.target.value)}
+        />
+        <p className="text-xs text-gray-400 mt-1">Default: First Motors Showroom, Chandpur Road, Bulandshahr</p>
       </div>
 
-      <button type="submit" disabled={loading} className="btn btn-primary justify-center">
-        {loading ? "Booking..." : "Book Test Drive"}
+      <button type="submit" disabled={loading} className="btn btn-primary justify-center py-3 text-base mt-2">
+        {loading ? "Submitting..." : "Confirm Test Drive Request"}
       </button>
+
       <p className="text-xs text-gray-400 text-center">
-        Our team will confirm your slot within a few hours.
+        No payment required. We will confirm by phone or WhatsApp before your appointment.
       </p>
     </form>
+  );
+}
+
+export default function TestDriveForm({ cars }: TestDriveFormProps) {
+  return (
+    <Suspense fallback={<div className="card p-8 text-center text-sm text-gray-500">Loading test drive form...</div>}>
+      <TestDriveFormInner cars={cars} />
+    </Suspense>
   );
 }
