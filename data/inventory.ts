@@ -458,7 +458,7 @@ const INVENTORY: CarListing[] = [
     hypothecation: false,
 
     // Pricing
-    price: 3.04,
+    price: 3.00,
     priceNegotiable: true,
 
     // Location
@@ -482,7 +482,7 @@ const INVENTORY: CarListing[] = [
 
     // Description
     description:
-      "2016 Hyundai Grand i10 Magna in Red finish, registered in Uttar Pradesh (Registration: UP16). 1st Owner vehicle with 52,000 km driven. Powered by a Petrol engine with manual transmission. Offered at approximately ₹3.04 Lakh. Equipped with Power Steering, Keyless Entry, Speed Sensing Door Locks, Front & Rear Power Windows, Dual Airbags, Manual AC, and ABS with EBD. Clear title with no active loan/hypothecation. Available for test drive and physical inspection at First Motors showroom, Chandpur Road, Kalyan Singh Medical College, Bulandshahr.",
+      "2016 Hyundai Grand i10 Magna in Red finish, registered in Uttar Pradesh (Registration: UP16). 1st Owner vehicle with 52,000 km driven. Powered by a Petrol engine with manual transmission. Offered at ₹3.00 Lakh. Equipped with Power Steering, Keyless Entry, Speed Sensing Door Locks, Front & Rear Power Windows, Dual Airbags, Manual AC, and ABS with EBD. Clear title with no active loan/hypothecation. Available for test drive and physical inspection at First Motors showroom, Chandpur Road, Kalyan Singh Medical College, Bulandshahr.",
 
     // Features
     features: [
@@ -524,7 +524,7 @@ const INVENTORY: CarListing[] = [
     hypothecation: false,
 
     // Pricing
-    price: 2.63,
+    price: 3.65,
     priceNegotiable: true,
 
     // Location
@@ -548,7 +548,7 @@ const INVENTORY: CarListing[] = [
 
     // Description
     description:
-      "2018 Maruti Suzuki Celerio VXI CNG in Grey finish, registered in Delhi (Registration: DL 6CR 7139). 1st Owner vehicle with approximately 55,000 km driven. Dual fuel Petrol + CNG setup with manual transmission. Offered at approximately ₹2.63 Lakh. Equipped with Power Steering, Front & Rear Power Windows, Keyless Entry, Dual Airbags, Speed Sensing Door Locks, Manual AC, and ABS with EBD. Clear title with no active loan/hypothecation. Available for test drive and physical inspection at First Motors showroom, Chandpur Road, Kalyan Singh Medical College, Bulandshahr.",
+      "2018 Maruti Suzuki Celerio VXI CNG in Grey finish, registered in Delhi (Registration: DL 6CR 7139). 1st Owner vehicle with approximately 55,000 km driven. Dual fuel Petrol + CNG setup with manual transmission. Offered at ₹3.65 Lakh. Equipped with Power Steering, Front & Rear Power Windows, Keyless Entry, Dual Airbags, Speed Sensing Door Locks, Manual AC, and ABS with EBD. Clear title with no active loan/hypothecation. Available for test drive and physical inspection at First Motors showroom, Chandpur Road, Kalyan Singh Medical College, Bulandshahr.",
 
     // Features
     features: [
