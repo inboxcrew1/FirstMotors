@@ -84,7 +84,7 @@ export default function CarCard({ car, className = "" }: CarCardProps) {
         {/* Next stock update banner across bottom of image */}
         {isSold ? (
           <div className="absolute bottom-0 inset-x-0 bg-navy-950/95 text-amber-300 text-[11px] font-bold text-center py-1.5 px-2 z-20 border-t border-amber-400/30 flex items-center justify-center gap-1">
-            <span>Next stock available on 01-01-2026 8PM</span>
+            <span>Next stock available on 01-11-2026 8PM</span>
           </div>
         ) : (
           car.images.length > 1 && (

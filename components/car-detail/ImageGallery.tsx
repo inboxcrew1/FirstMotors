@@ -59,7 +59,7 @@ export default function ImageGallery({ images, carName, isSold = false }: ImageG
           {isSold && (
             <div className="absolute top-3 left-3 z-20 bg-navy-950/95 text-amber-300 border border-amber-400/40 rounded-lg px-3 py-1.5 text-xs sm:text-sm font-bold shadow-lg flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
-              <span>Next stock available on 01-01-2026 8PM</span>
+              <span>Next stock available on 01-11-2026 8PM</span>
             </div>
           )}
           {/* Angle / View label */}

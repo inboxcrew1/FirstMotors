@@ -53,11 +53,11 @@ export default function FeaturedCars() {
               <h3 className="font-bold text-sm sm:text-base text-navy-900">Current Online Showcase Cars are SOLD</h3>
             </div>
             <p className="text-xs sm:text-sm text-gray-700 mt-1">
-              Next stock available on <strong className="text-navy-900 font-extrabold">01-01-2026 8PM</strong>. Contact us or visit our showroom on Chandpur Road to pre-book upcoming arrivals.
+              Next stock available on <strong className="text-navy-900 font-extrabold">01-11-2026 8PM</strong>. Contact us or visit our showroom on Chandpur Road to pre-book upcoming arrivals.
             </p>
           </div>
           <a
-            href={formatWhatsAppLink(SITE_CONFIG.whatsapp, "Hello First Motors, please notify me when the next stock is available on 01-01-2026 8PM.")}
+            href={formatWhatsAppLink(SITE_CONFIG.whatsapp, "Hello First Motors, please notify me when the next stock is available on 01-11-2026 8PM.")}
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-whatsapp text-xs py-2 px-3.5 whitespace-nowrap self-start sm:self-auto"

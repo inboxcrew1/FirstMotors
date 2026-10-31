@@ -161,7 +161,7 @@ export default async function CarDetailPage({ params }: Props) {
                       This vehicle has been marked as SOLD
                     </p>
                     <p className="text-xs font-bold text-amber-800">
-                      Next stock available on 01-01-2026 8PM
+                      Next stock available on 01-11-2026 8PM
                     </p>
                   </div>
                 </div>
@@ -261,7 +261,7 @@ export default async function CarDetailPage({ params }: Props) {
                         This car has been SOLD
                       </div>
                       <p className="text-xs font-bold text-amber-800">
-                        Next stock available on 01-01-2026 8PM
+                        Next stock available on 01-11-2026 8PM
                       </p>
                     </div>
                   )}

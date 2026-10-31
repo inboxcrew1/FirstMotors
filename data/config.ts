@@ -21,7 +21,7 @@ export const SITE_CONFIG = {
   // Stock update notice
   stockUpdate: {
     isSoldOut: true,
-    message: "Next stock available on 01-01-2026 8PM",
+    message: "Next stock available on 01-11-2026 8PM",
   },
 
   // Dealership Team / Key Contacts
