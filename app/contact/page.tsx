@@ -8,7 +8,7 @@ import ContactForm from "@/components/forms/ContactForm";
 export const metadata: Metadata = {
   title: "Contact First Motors | Used Car Dealer in Bulandshahr",
   description:
-    "Get in touch with First Motors showroom in Bulandshahr, UP. Call Shariq Ansari (8267871486) or Mohd Rehan Khan (9997460658). Visit us on Chandpur Road, near Kalyan Singh Rajkiya Medical College.",
+    "Get in touch with First Motors showroom in Bulandshahr, UP. Call Shariq Ansari (8267871486), Mohd Rehan Khan (9997460658), or Mohd Nafees (9917870158). Visit us on Chandpur Road, near Kalyan Singh Rajkiya Medical College.",
   alternates: {
     canonical: "https://firstmotorsbsr.com/contact",
   },
@@ -17,13 +17,13 @@ export const metadata: Metadata = {
     url: "https://firstmotorsbsr.com/contact",
     siteName: SITE_CONFIG.name,
     title: "Contact First Motors | Used Car Dealer in Bulandshahr",
-    description: "Contact First Motors showroom in Bulandshahr. Call 8267871486 or 9997460658. Visit us on Chandpur Road for pre-owned cars.",
+    description: "Contact First Motors showroom in Bulandshahr. Call 8267871486, 9997460658, or 9917870158. Visit us on Chandpur Road for pre-owned cars.",
     images: [{ url: `${SITE_CONFIG.url}/showroom.jpg`, alt: "First Motors Showroom Bulandshahr" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Contact First Motors | Bulandshahr",
-    description: "Contact First Motors showroom in Bulandshahr. Call or WhatsApp Shariq Ansari and Mohd Rehan Khan.",
+    description: "Contact First Motors showroom in Bulandshahr. Call or WhatsApp Shariq Ansari, Mohd Rehan Khan, and Mohd Nafees.",
     images: [`${SITE_CONFIG.url}/showroom.jpg`],
   },
 };
@@ -90,6 +90,11 @@ export default function ContactPage() {
                         <span className="text-sm font-semibold text-gray-900">Mohd Rehan Khan:</span>
                         <a href="tel:+919997460658" className="text-sm font-bold text-navy-800 hover:text-red-600">99974 60658</a>
                         <a href="https://wa.me/919997460658" target="_blank" rel="noopener noreferrer" className="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded font-medium">WhatsApp</a>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <span className="text-sm font-semibold text-gray-900">Mohd Nafees:</span>
+                        <a href="tel:+919917870158" className="text-sm font-bold text-navy-800 hover:text-red-600">99178 70158</a>
+                        <a href="https://wa.me/919917870158" target="_blank" rel="noopener noreferrer" className="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded font-medium">WhatsApp</a>
                       </div>
                     </div>
                   </div>

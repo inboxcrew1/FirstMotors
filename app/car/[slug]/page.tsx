@@ -152,6 +152,29 @@ export default async function CarDetailPage({ params }: Props) {
         <div className="container-fm py-6">
           {/* Main Title Section - Semantic H1 visible on ALL devices (Desktop, Tablet, Mobile) */}
           <div className="mb-6">
+            {car.status === "sold" && (
+              <div className="mb-4 p-4 rounded-xl bg-gradient-to-r from-red-50 to-amber-50 border border-amber-300 flex flex-col sm:flex-row sm:items-center justify-between gap-3 shadow-sm">
+                <div className="flex items-center gap-3">
+                  <span className="badge badge-red font-black px-3 py-1 text-xs uppercase tracking-wider">SOLD</span>
+                  <div>
+                    <p className="text-sm font-bold text-gray-900">
+                      This vehicle has been marked as SOLD
+                    </p>
+                    <p className="text-xs font-bold text-amber-800">
+                      Next stock available on 01-01-2026 8PM
+                    </p>
+                  </div>
+                </div>
+                <a
+                  href={whatsappLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-whatsapp text-xs py-2 px-3.5 self-start sm:self-auto"
+                >
+                  Enquire Next Stock
+                </a>
+              </div>
+            )}
             <div className="flex flex-wrap items-center gap-2 mb-2">
               <span className="text-xs font-bold uppercase tracking-wider px-2.5 py-0.5 rounded text-blue-900 bg-blue-50 border border-blue-100">
                 {car.brand}
@@ -184,7 +207,11 @@ export default async function CarDetailPage({ params }: Props) {
             {/* ── Left column ── */}
             <div className="flex-1 min-w-0 flex flex-col gap-6">
               {/* Gallery */}
-              <ImageGallery images={car.images} carName={`${car.year} ${car.brand} ${car.model}`} />
+              <ImageGallery
+                images={car.images}
+                carName={`${car.year} ${car.brand} ${car.model}`}
+                isSold={car.status === "sold"}
+              />
 
               {/* Mobile: Price & Quick CTA (below gallery, clean layout without duplicate H1) */}
               <div className="lg:hidden">
@@ -229,8 +256,13 @@ export default async function CarDetailPage({ params }: Props) {
                     </div>
                   )}
                   {car.status === "sold" && (
-                    <div className="badge badge-red w-full justify-center py-2 text-sm font-semibold">
-                      This car has been SOLD
+                    <div className="p-3 bg-red-50 border border-red-200 rounded-lg text-center">
+                      <div className="badge badge-red w-full justify-center py-1.5 text-sm font-bold mb-1">
+                        This car has been SOLD
+                      </div>
+                      <p className="text-xs font-bold text-amber-800">
+                        Next stock available on 01-01-2026 8PM
+                      </p>
                     </div>
                   )}
                 </div>

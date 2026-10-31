@@ -43,8 +43,13 @@ export default function CarDetailCTA({ car, whatsappLink }: CarDetailCTAProps) {
 
       {/* Status */}
       {car.status === "sold" && (
-        <div className="badge badge-red w-full justify-center text-sm py-2 mb-4">
-          This car has been SOLD
+        <div className="p-3 bg-red-50 border border-red-200 rounded-lg text-center mb-4">
+          <div className="badge badge-red w-full justify-center text-sm py-1.5 font-bold mb-1.5">
+            This car has been SOLD
+          </div>
+          <p className="text-xs font-bold text-amber-800">
+            Next stock available on 01-01-2026 8PM
+          </p>
         </div>
       )}
       {car.status === "reserved" && (
@@ -103,6 +108,10 @@ export default function CarDetailCTA({ car, whatsappLink }: CarDetailCTAProps) {
         <div className="flex justify-between items-center py-0.5">
           <span>Mohd Rehan Khan</span>
           <a href="tel:+919997460658" className="font-bold text-navy-800 hover:text-red-600">99974 60658</a>
+        </div>
+        <div className="flex justify-between items-center py-0.5">
+          <span>Mohd Nafees</span>
+          <a href="tel:+919917870158" className="font-bold text-navy-800 hover:text-red-600">99178 70158</a>
         </div>
       </div>
 

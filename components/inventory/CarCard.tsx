@@ -28,9 +28,7 @@ export default function CarCard({ car, className = "" }: CarCardProps) {
 
   return (
     <div
-      className={`card group relative flex flex-col transition-all duration-300 hover:-translate-y-1 ${
-        isSold ? "opacity-70" : ""
-      } ${className}`}
+      className={`card group relative flex flex-col transition-all duration-300 hover:-translate-y-1 ${className}`}
       style={{
         boxShadow: "var(--shadow-card)",
       }}
@@ -43,7 +41,7 @@ export default function CarCard({ car, className = "" }: CarCardProps) {
       }}
     >
       {/* Image */}
-      <div className="relative overflow-hidden" style={{ height: "200px" }}>
+      <div className="relative overflow-hidden" style={{ height: "205px" }}>
         <Image
           src={car.thumbnailUrl}
           alt={`${car.year} ${car.brand} ${car.model} ${car.variant} at First Motors Bulandshahr`}
@@ -52,6 +50,15 @@ export default function CarCard({ car, className = "" }: CarCardProps) {
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
           loading="lazy"
         />
+
+        {/* SOLD Watermark overlay */}
+        {isSold && (
+          <div className="absolute inset-0 z-20 flex items-center justify-center pointer-events-none bg-black/25">
+            <div className="transform -rotate-12 border-[3px] border-white/90 bg-red-600/95 text-white font-black text-2xl tracking-widest px-5 py-1 rounded-md shadow-2xl uppercase select-none drop-shadow">
+              SOLD
+            </div>
+          </div>
+        )}
 
         {/* Overlay badges */}
         <div className="absolute top-3 left-3 flex flex-col gap-1.5 z-10">
@@ -62,7 +69,7 @@ export default function CarCard({ car, className = "" }: CarCardProps) {
             </span>
           )}
           {isSold && (
-            <span className="badge badge-red">SOLD</span>
+            <span className="badge badge-red font-bold">SOLD</span>
           )}
           {car.status === "reserved" && (
             <span
@@ -74,14 +81,20 @@ export default function CarCard({ car, className = "" }: CarCardProps) {
           )}
         </div>
 
-        {/* Image count */}
-        {car.images.length > 1 && (
-          <div
-            className="absolute bottom-3 left-3 px-2 py-0.5 rounded text-xs font-semibold text-white z-10"
-            style={{ background: "rgba(0,0,0,0.55)" }}
-          >
-            1/{car.images.length}
+        {/* Next stock update banner across bottom of image */}
+        {isSold ? (
+          <div className="absolute bottom-0 inset-x-0 bg-navy-950/95 text-amber-300 text-[11px] font-bold text-center py-1.5 px-2 z-20 border-t border-amber-400/30 flex items-center justify-center gap-1">
+            <span>Next stock available on 01-01-2026 8PM</span>
           </div>
+        ) : (
+          car.images.length > 1 && (
+            <div
+              className="absolute bottom-3 left-3 px-2 py-0.5 rounded text-xs font-semibold text-white z-10"
+              style={{ background: "rgba(0,0,0,0.55)" }}
+            >
+              1/{car.images.length}
+            </div>
+          )
         )}
 
         {/* Wishlist */}

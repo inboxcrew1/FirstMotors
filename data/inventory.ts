@@ -42,7 +42,7 @@ const INVENTORY: CarListing[] = [
     dealerCity: "Bulandshahr",
 
     // Status
-    status: "available",
+    status: "sold",
     featured: true,
     verified: true,
 
@@ -168,7 +168,7 @@ const INVENTORY: CarListing[] = [
     dealerCity: "Bulandshahr",
 
     // Status
-    status: "available",
+    status: "sold",
     featured: true,
     verified: true,
 
@@ -254,7 +254,7 @@ const INVENTORY: CarListing[] = [
     dealerCity: "Bulandshahr",
 
     // Status
-    status: "available",
+    status: "sold",
     featured: true,
     verified: true,
 
@@ -360,7 +360,7 @@ const INVENTORY: CarListing[] = [
     dealerCity: "Bulandshahr",
 
     // Status
-    status: "available",
+    status: "sold",
     featured: true,
     verified: true,
 
@@ -466,7 +466,7 @@ const INVENTORY: CarListing[] = [
     dealerCity: "Bulandshahr",
 
     // Status
-    status: "available",
+    status: "sold",
     featured: true,
     verified: true,
 
@@ -532,7 +532,7 @@ const INVENTORY: CarListing[] = [
     dealerCity: "Bulandshahr",
 
     // Status
-    status: "available",
+    status: "sold",
     featured: true,
     verified: true,
 
@@ -598,7 +598,7 @@ const INVENTORY: CarListing[] = [
     dealerCity: "Bulandshahr",
 
     // Status
-    status: "available",
+    status: "sold",
     featured: true,
     verified: true,
 

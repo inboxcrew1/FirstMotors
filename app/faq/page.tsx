@@ -33,7 +33,7 @@ const FAQS = [
     items: [
       {
         q: "Where can I buy a reliable used car in Bulandshahr?",
-        a: "First Motors is a trusted pre-owned car dealer located on Chandpur Road, near Kalyan Singh Rajkiya Medical College, Bulandshahr, UP – 203001. We maintain 100+ vehicles at our physical showroom while featuring a selected inventory online. Call Shariq Ansari at 8267871486 or Mohd Rehan Khan at 9997460658 for assistance.",
+        a: "First Motors is a trusted pre-owned car dealer located on Chandpur Road, near Kalyan Singh Rajkiya Medical College, Bulandshahr, UP – 203001. We maintain 100+ vehicles at our physical showroom while featuring a selected inventory online. Call Shariq Ansari at 8267871486, Mohd Rehan Khan at 9997460658, or Mohd Nafees at 9917870158 for assistance.",
       },
       {
         q: "How many cars are available at First Motors showroom?",
@@ -141,7 +141,7 @@ const FAQS = [
       },
       {
         q: "How can I directly contact First Motors representatives?",
-        a: "You can call or WhatsApp Shariq Ansari at 8267871486 or Mohd Rehan Khan at 9997460658. You can also visit our showroom on Chandpur Road, Bulandshahr.",
+        a: "You can call or WhatsApp Shariq Ansari at 8267871486, Mohd Rehan Khan at 9997460658, or Mohd Nafees at 9917870158. You can also visit our showroom on Chandpur Road, Bulandshahr.",
       },
     ],
   },
@@ -214,13 +214,17 @@ export default function FAQPage() {
             <p className="text-gray-500 text-sm mb-4">
               Call or WhatsApp our showroom team directly:
             </p>
-            <div className="flex flex-col sm:flex-row gap-3 justify-center items-center mb-5">
+            <div className="flex flex-col sm:flex-row gap-3 justify-center items-center mb-5 flex-wrap">
               <a href="tel:+918267871486" className="text-sm font-semibold text-navy-900 hover:text-red-600 transition-colors">
                 📞 Shariq Ansari: 82678 71486
               </a>
               <span className="hidden sm:inline text-gray-300">|</span>
               <a href="tel:+919997460658" className="text-sm font-semibold text-navy-900 hover:text-red-600 transition-colors">
                 📞 Mohd Rehan Khan: 99974 60658
+              </a>
+              <span className="hidden sm:inline text-gray-300">|</span>
+              <a href="tel:+919917870158" className="text-sm font-semibold text-navy-900 hover:text-red-600 transition-colors">
+                📞 Mohd Nafees: 99178 70158
               </a>
             </div>
             <div className="flex gap-3 justify-center flex-wrap">

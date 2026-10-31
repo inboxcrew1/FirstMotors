@@ -128,7 +128,7 @@ export default function AboutPage() {
             </div>
             <div className="prose prose-gray max-w-none text-base leading-relaxed text-gray-700 space-y-4">
               <p>
-                Led by <strong>Shariq Ansari</strong> and <strong>Mohd Rehan Khan</strong>, <strong>First Motors</strong> has been serving car buyers and sellers in Bulandshahr and Western Uttar Pradesh for over <strong>10+ years</strong>.
+                Led by <strong>Shariq Ansari</strong>, <strong>Mohd Rehan Khan</strong>, and <strong>Mohd Nafees</strong>, <strong>First Motors</strong> has been serving car buyers and sellers in Bulandshahr and Western Uttar Pradesh for over <strong>10+ years</strong>.
               </p>
               <p>
                 Our physical dealership showroom is located on <strong>Chandpur Road, near Kalyan Singh Rajkiya Medical College in Bulandshahr</strong>. With more than <strong>100+ vehicles</strong> available in our physical stock, we maintain one of the largest pre-owned vehicle selections in the region.
@@ -292,7 +292,7 @@ export default function AboutPage() {
             Ready to Find Your Next Car?
           </h2>
           <p className="text-slate-300 mb-8 max-w-lg mx-auto text-sm sm:text-base">
-            Browse our selected online collection or connect with Shariq Ansari (8267871486) and Mohd Rehan Khan (9997460658).
+            Browse our selected online collection or connect with Shariq Ansari (8267871486), Mohd Rehan Khan (9997460658), and Mohd Nafees (9917870158).
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link href="/buy" className="btn btn-primary px-8">Browse Cars</Link>

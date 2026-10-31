@@ -257,6 +257,10 @@ export default function Navbar() {
                   <span>Mohd Rehan Khan</span>
                   <span className="text-gray-500 font-medium">99974 60658</span>
                 </a>
+                <a href="tel:+919917870158" className="flex items-center justify-between text-gray-700 font-semibold hover:text-navy-900">
+                  <span>Mohd Nafees</span>
+                  <span className="text-gray-500 font-medium">99178 70158</span>
+                </a>
               </div>
             </div>
 

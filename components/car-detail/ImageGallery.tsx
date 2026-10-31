@@ -8,9 +8,10 @@ import type { CarImage } from "@/lib/types";
 interface ImageGalleryProps {
   images: CarImage[];
   carName: string;
+  isSold?: boolean;
 }
 
-export default function ImageGallery({ images, carName }: ImageGalleryProps) {
+export default function ImageGallery({ images, carName, isSold = false }: ImageGalleryProps) {
   const [current, setCurrent] = useState(0);
   const [lightboxOpen, setLightboxOpen] = useState(false);
 
@@ -44,6 +45,23 @@ export default function ImageGallery({ images, carName }: ImageGalleryProps) {
             priority={current === 0}
             sizes="(max-width: 1024px) 100vw, 65vw"
           />
+
+          {/* SOLD Watermark overlay */}
+          {isSold && (
+            <div className="absolute inset-0 z-20 flex items-center justify-center pointer-events-none bg-black/30">
+              <div className="transform -rotate-12 border-4 border-white/95 bg-red-600/95 text-white font-black text-3xl sm:text-5xl tracking-widest px-8 sm:px-12 py-2 sm:py-3 rounded-xl shadow-2xl uppercase select-none drop-shadow-lg">
+                SOLD
+              </div>
+            </div>
+          )}
+
+          {/* Next stock update notice */}
+          {isSold && (
+            <div className="absolute top-3 left-3 z-20 bg-navy-950/95 text-amber-300 border border-amber-400/40 rounded-lg px-3 py-1.5 text-xs sm:text-sm font-bold shadow-lg flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
+              <span>Next stock available on 01-01-2026 8PM</span>
+            </div>
+          )}
           {/* Angle / View label */}
           <div
             className="absolute bottom-3 left-3 px-3 py-1 rounded-md text-xs font-medium text-white max-w-[65%] truncate pointer-events-none shadow-sm"

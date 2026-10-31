@@ -176,6 +176,15 @@ export default function LocationSection() {
                           99974 60658
                         </a>
                       </div>
+                      <div className="flex items-center gap-2 text-sm">
+                        <span className="font-semibold text-gray-900">Mohd Nafees:</span>
+                        <a
+                          href="tel:+919917870158"
+                          className="font-medium text-navy-800 hover:text-red-600 transition-colors"
+                        >
+                          99178 70158
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>

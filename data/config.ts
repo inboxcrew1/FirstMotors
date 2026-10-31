@@ -11,12 +11,18 @@ export const SITE_CONFIG = {
     "Quality pre-owned cars, transparent pricing and a simpler way to buy, sell or exchange your car in Bulandshahr and Western UP.",
   url: "https://firstmotorsbsr.com",
 
-  // Primary contacts (Shariq Ansari: 8267871486 / Mohd Rehan Khan: 9997460658)
+  // Primary contacts (Shariq Ansari: 8267871486 / Mohd Rehan Khan: 9997460658 / Mohd Nafees: 9917870158)
   phone: "+918267871486",
   phoneDisplay: "+91 82678 71486",
   whatsapp: "+918267871486",
   whatsappDisplay: "+91 82678 71486",
   email: "info@firstmotorsbsr.com",
+
+  // Stock update notice
+  stockUpdate: {
+    isSoldOut: true,
+    message: "Next stock available on 01-01-2026 8PM",
+  },
 
   // Dealership Team / Key Contacts
   contacts: [
@@ -33,6 +39,13 @@ export const SITE_CONFIG = {
       phoneDisplay: "+91 99974 60658",
       whatsapp: "+919997460658",
       whatsappDisplay: "+91 99974 60658",
+    },
+    {
+      name: "Mohd Nafees",
+      phone: "+919917870158",
+      phoneDisplay: "+91 99178 70158",
+      whatsapp: "+919917870158",
+      whatsappDisplay: "+91 99178 70158",
     },
   ],
 

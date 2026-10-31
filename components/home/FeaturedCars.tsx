@@ -45,6 +45,27 @@ export default function FeaturedCars() {
           )}
         </div>
 
+        {/* Stock Update Banner */}
+        <div className="mb-6 p-4 rounded-xl bg-gradient-to-r from-red-50 via-amber-50 to-red-50 border border-amber-300 flex flex-col sm:flex-row sm:items-center justify-between gap-3 shadow-sm">
+          <div>
+            <div className="flex items-center gap-2">
+              <span className="bg-red-600 text-white font-black text-[11px] px-2.5 py-0.5 rounded uppercase tracking-wider">Stock Update</span>
+              <h3 className="font-bold text-sm sm:text-base text-navy-900">Current Online Showcase Cars are SOLD</h3>
+            </div>
+            <p className="text-xs sm:text-sm text-gray-700 mt-1">
+              Next stock available on <strong className="text-navy-900 font-extrabold">01-01-2026 8PM</strong>. Contact us or visit our showroom on Chandpur Road to pre-book upcoming arrivals.
+            </p>
+          </div>
+          <a
+            href={formatWhatsAppLink(SITE_CONFIG.whatsapp, "Hello First Motors, please notify me when the next stock is available on 01-01-2026 8PM.")}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-whatsapp text-xs py-2 px-3.5 whitespace-nowrap self-start sm:self-auto"
+          >
+            Pre-Book Next Stock
+          </a>
+        </div>
+
         {/* Car grid / Empty state */}
         {featuredCars.length > 0 ? (
           <>
