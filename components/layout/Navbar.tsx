@@ -8,19 +8,18 @@ import { Menu, X, Phone, ChevronDown } from "lucide-react";
 import { SITE_CONFIG, WHATSAPP_MESSAGES } from "@/data/config";
 import { formatWhatsAppLink, formatPhoneLink } from "@/lib/utils";
 
-const NAV_LINKS = [
+interface NavItem {
+  label: string;
+  href?: string;
+  children?: { label: string; href: string }[];
+}
+
+const NAV_LINKS: NavItem[] = [
   { label: "Buy Cars", href: "/buy" },
   { label: "Sell Your Car", href: "/sell" },
   { label: "Exchange", href: "/exchange" },
   { label: "Finance", href: "/finance" },
-  {
-    label: "About",
-    children: [
-      { label: "About First Motors", href: "/about" },
-      { label: "Why First Motors", href: "/why-first-motors" },
-      { label: "Quality Check", href: "/inspection" },
-    ],
-  },
+  { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -254,9 +253,9 @@ export default function Navbar() {
                   <span>Shariq Ansari</span>
                   <span className="text-gray-500 font-medium">82678 71486</span>
                 </a>
-                <a href="tel:+919953950721" className="flex items-center justify-between text-gray-700 font-semibold hover:text-navy-900">
-                  <span>Shamir Khan</span>
-                  <span className="text-gray-500 font-medium">99539 50721</span>
+                <a href="tel:+919997460658" className="flex items-center justify-between text-gray-700 font-semibold hover:text-navy-900">
+                  <span>Mohd Rehan Khan</span>
+                  <span className="text-gray-500 font-medium">99974 60658</span>
                 </a>
               </div>
             </div>

@@ -168,12 +168,12 @@ export default function LocationSection() {
                         </a>
                       </div>
                       <div className="flex items-center gap-2 text-sm">
-                        <span className="font-semibold text-gray-900">Shamir Khan:</span>
+                        <span className="font-semibold text-gray-900">Mohd Rehan Khan:</span>
                         <a
-                          href="tel:+919953950721"
+                          href="tel:+919997460658"
                           className="font-medium text-navy-800 hover:text-red-600 transition-colors"
                         >
-                          99539 50721
+                          99974 60658
                         </a>
                       </div>
                     </div>

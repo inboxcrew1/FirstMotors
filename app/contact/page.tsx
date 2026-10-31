@@ -8,7 +8,7 @@ import ContactForm from "@/components/forms/ContactForm";
 export const metadata: Metadata = {
   title: "Contact First Motors | Used Car Dealer in Bulandshahr",
   description:
-    "Get in touch with First Motors showroom in Bulandshahr, UP. Call Shariq Ansari (8267871486) or Shamir Khan (9953950721). Visit us on Chandpur Road, near Kalyan Singh Rajkiya Medical College.",
+    "Get in touch with First Motors showroom in Bulandshahr, UP. Call Shariq Ansari (8267871486) or Mohd Rehan Khan (9997460658). Visit us on Chandpur Road, near Kalyan Singh Rajkiya Medical College.",
   alternates: {
     canonical: "https://firstmotorsbsr.com/contact",
   },
@@ -17,13 +17,13 @@ export const metadata: Metadata = {
     url: "https://firstmotorsbsr.com/contact",
     siteName: SITE_CONFIG.name,
     title: "Contact First Motors | Used Car Dealer in Bulandshahr",
-    description: "Contact First Motors showroom in Bulandshahr. Call 8267871486 or 9953950721. Visit us on Chandpur Road for pre-owned cars.",
+    description: "Contact First Motors showroom in Bulandshahr. Call 8267871486 or 9997460658. Visit us on Chandpur Road for pre-owned cars.",
     images: [{ url: `${SITE_CONFIG.url}/showroom.jpg`, alt: "First Motors Showroom Bulandshahr" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Contact First Motors | Bulandshahr",
-    description: "Contact First Motors showroom in Bulandshahr. Call or WhatsApp Shariq Ansari and Shamir Khan.",
+    description: "Contact First Motors showroom in Bulandshahr. Call or WhatsApp Shariq Ansari and Mohd Rehan Khan.",
     images: [`${SITE_CONFIG.url}/showroom.jpg`],
   },
 };
@@ -87,9 +87,9 @@ export default function ContactPage() {
                         <a href="https://wa.me/918267871486" target="_blank" rel="noopener noreferrer" className="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded font-medium">WhatsApp</a>
                       </div>
                       <div className="flex items-center gap-2">
-                        <span className="text-sm font-semibold text-gray-900">Shamir Khan:</span>
-                        <a href="tel:+919953950721" className="text-sm font-bold text-navy-800 hover:text-red-600">99539 50721</a>
-                        <a href="https://wa.me/919953950721" target="_blank" rel="noopener noreferrer" className="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded font-medium">WhatsApp</a>
+                        <span className="text-sm font-semibold text-gray-900">Mohd Rehan Khan:</span>
+                        <a href="tel:+919997460658" className="text-sm font-bold text-navy-800 hover:text-red-600">99974 60658</a>
+                        <a href="https://wa.me/919997460658" target="_blank" rel="noopener noreferrer" className="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded font-medium">WhatsApp</a>
                       </div>
                     </div>
                   </div>

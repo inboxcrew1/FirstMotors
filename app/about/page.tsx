@@ -6,7 +6,7 @@ import { SITE_CONFIG } from "@/data/config";
 export const metadata: Metadata = {
   title: "About First Motors | 10+ Years Trusted Used Car Dealer in Bulandshahr",
   description:
-    "Learn about First Motors — Bulandshahr's trusted pre-owned car dealership with 10+ years of automotive excellence, 100+ vehicles in showroom stock, and 500+ happy customers.",
+    "Learn about First Motors — Bulandshahr's trusted pre-owned car dealership with 10+ years of automotive excellence, 100+ vehicles in showroom stock, thorough vehicle quality checks, and 500+ happy customers.",
   alternates: {
     canonical: "https://firstmotorsbsr.com/about",
   },
@@ -15,13 +15,13 @@ export const metadata: Metadata = {
     url: "https://firstmotorsbsr.com/about",
     siteName: SITE_CONFIG.name,
     title: "About First Motors | Trusted Used Car Dealer in Bulandshahr",
-    description: "10+ years in business, 100+ vehicles in showroom stock, and 500+ happy customers in Bulandshahr and Western UP.",
-    images: [{ url: `${SITE_CONFIG.url}/showroom.jpg`, alt: "First Motors Dealership Showroom Bulandshahr" }],
+    description: "10+ years in business, 100+ vehicles in showroom stock, thorough vehicle quality checks, and 500+ happy customers in Bulandshahr and Western UP.",
+    images: [{ url: `${SITE_CONFIG.url}/showroom.jpg`, alt: "First Motors Bulandshahr" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "About First Motors | Bulandshahr",
-    description: "10+ years of trusted automotive service in Bulandshahr. 100+ showroom cars.",
+    description: "10+ years of trusted automotive service in Bulandshahr. 100+ showroom cars & quality checks.",
     images: [`${SITE_CONFIG.url}/showroom.jpg`],
   },
 };
@@ -35,17 +35,39 @@ const breadcrumbSchema = {
   ],
 };
 
+const STATS = [
+  { value: "10+", label: "Years in Business" },
+  { value: "100+", label: "Showroom Vehicles" },
+  { value: "500+", label: "Happy Customers" },
+  { value: "5.0 ★", label: "Customer Rating" },
+];
+
 const VALUES = [
   { icon: "🔍", title: "Complete Transparency", desc: "Honest vehicle condition reports, clear pricing, and no hidden charges or misleading claims." },
   { icon: "⭐", title: "Rigorous Quality Check", desc: "Every car in our showroom undergoes physical inspection of mechanicals, electricals, and documentation." },
   { icon: "🤝", title: "Customer-First Philosophy", desc: "Over 500+ satisfied car owners have trusted First Motors across Bulandshahr and Western UP." },
 ];
 
-const STATS = [
-  { value: "10+", label: "Years in Business" },
-  { value: "100+", label: "Showroom Vehicles" },
-  { value: "500+", label: "Happy Customers" },
-  { value: "5.0 ★", label: "Customer Rating" },
+const REASONS = [
+  { icon: "🔍", title: "Carefully Selected & Verified Cars", desc: "Each vehicle in our showroom is physically inspected by our experienced team before being listed for sale." },
+  { icon: "📋", title: "Transparent Vehicle Information", desc: "Honest odometer readings, authentic ownership details, genuine fuel type, and verified registration history." },
+  { icon: "🚗", title: "Convenient Showroom Test Drives", desc: "Test drive any vehicle at our Chandpur Road showroom before deciding. Feel the road comfort first-hand." },
+  { icon: "💰", title: "Reputable Finance Assistance", desc: "We connect you with leading auto finance institutions for flexible, affordable EMI options." },
+  { icon: "📄", title: "End-to-End Documentation Support", desc: "We guide you through RC transfer, sale agreements, and official paperwork from start to finish." },
+  { icon: "🤝", title: "10+ Years of Local Trust", desc: "Over 500+ happy customers across Bulandshahr and Western UP rely on our personal, honest service." },
+];
+
+const INSPECTION_CATEGORIES = [
+  { icon: "🚗", name: "Exterior & Body", desc: "Body panels, paint consistency, accident repair checks, and alignment." },
+  { icon: "💺", name: "Interior & Cabin", desc: "Upholstery condition, dashboard controls, seat wear, and hygiene." },
+  { icon: "⚙️", name: "Engine & Fluids", desc: "Engine compression, oil condition, coolant levels, and leak checks." },
+  { icon: "🔧", name: "Transmission & Clutch", desc: "Gear shifting smoothness, clutch plate bite, and gearbox responsiveness." },
+  { icon: "🔄", name: "Tyres & Wheels", desc: "Tread depth, uniform tyre wear, sidewall health, and wheel alignment." },
+  { icon: "🛑", name: "Braking System", desc: "Brake pad thickness, disc surface condition, and stopping distance." },
+  { icon: "⚡", name: "Electricals & Battery", desc: "Battery health, headlights, indicators, power windows, and accessories." },
+  { icon: "❄️", name: "AC & Climate Control", desc: "Compressor cooling power, heating, fan speeds, and cabin filter." },
+  { icon: "🔩", name: "Suspension & Steering", desc: "Shock absorber response, steering rack tightness, and ground clearance." },
+  { icon: "📄", name: "Documentation & RC", desc: "Original RC, valid insurance, PUC, and Parivahan portal verification." },
 ];
 
 export default function AboutPage() {
@@ -70,7 +92,7 @@ export default function AboutPage() {
           <h1 className="text-4xl sm:text-5xl font-extrabold text-white mb-4" style={{ fontFamily: "var(--font-heading)" }}>
             About First Motors Bulandshahr
           </h1>
-          <p className="text-slate-300 text-lg max-w-xl mx-auto">
+          <p className="text-slate-300 text-lg max-w-2xl mx-auto">
             Bulandshahr&apos;s trusted pre-owned car dealership committed to making used car buying simple, transparent, and stress-free.
           </p>
         </div>
@@ -96,12 +118,17 @@ export default function AboutPage() {
       <section className="section" style={{ background: "white" }}>
         <div className="container-fm">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-extrabold mb-6" style={{ color: "var(--color-navy-900)", fontFamily: "var(--font-heading)" }}>
-              Our Story &amp; Commitment
-            </h2>
+            <div className="mb-6">
+              <p className="text-xs font-bold uppercase tracking-widest mb-1.5" style={{ color: "var(--color-red-brand)" }}>
+                Bulandshahr Pre-Owned Car Dealership
+              </p>
+              <h2 className="text-3xl sm:text-4xl font-extrabold" style={{ color: "var(--color-navy-900)", fontFamily: "var(--font-heading)" }}>
+                Our Story &amp; Commitment
+              </h2>
+            </div>
             <div className="prose prose-gray max-w-none text-base leading-relaxed text-gray-700 space-y-4">
               <p>
-                Led by <strong>Shariq Ansari</strong> and <strong>Shamir Khan</strong>, <strong>First Motors</strong> has been serving car buyers and sellers in Bulandshahr and Western Uttar Pradesh for over <strong>10+ years</strong>.
+                Led by <strong>Shariq Ansari</strong> and <strong>Mohd Rehan Khan</strong>, <strong>First Motors</strong> has been serving car buyers and sellers in Bulandshahr and Western Uttar Pradesh for over <strong>10+ years</strong>.
               </p>
               <p>
                 Our physical dealership showroom is located on <strong>Chandpur Road, near Kalyan Singh Rajkiya Medical College in Bulandshahr</strong>. With more than <strong>100+ vehicles</strong> available in our physical stock, we maintain one of the largest pre-owned vehicle selections in the region.
@@ -137,6 +164,82 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* ── Section: Why Buy From First Motors ── */}
+      <section id="why-us" className="section scroll-mt-20" style={{ background: "white" }}>
+        <div className="container-fm">
+          <div className="text-center mb-10 max-w-2xl mx-auto">
+            <p className="text-xs font-bold uppercase tracking-widest mb-2" style={{ color: "var(--color-red-brand)" }}>
+              Our Promise to Every Customer
+            </p>
+            <h2 className="text-3xl sm:text-4xl font-extrabold mb-3" style={{ color: "var(--color-navy-900)", fontFamily: "var(--font-heading)" }}>
+              Why Buy From First Motors?
+            </h2>
+            <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+              10+ years of automotive excellence, 100+ cars available in showroom stock, and an unwavering commitment to transparent dealings.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {REASONS.map((item) => (
+              <div
+                key={item.title}
+                className="rounded-xl p-6 transition-all hover:shadow-md"
+                style={{ background: "var(--color-surface)", border: "1px solid #e5e7eb" }}
+              >
+                <div className="text-4xl mb-4">{item.icon}</div>
+                <h3 className="font-bold text-base mb-2" style={{ color: "var(--color-navy-900)" }}>{item.title}</h3>
+                <p className="text-sm text-gray-500 leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Honest Approach Callout */}
+          <div className="mt-8 max-w-3xl mx-auto rounded-xl p-5" style={{ background: "#f0f9ff", border: "1px solid #bae6fd" }}>
+            <p className="text-sm text-blue-800 leading-relaxed">
+              <strong>Our Honest Approach:</strong> We state only verified facts. With 10+ years in business and 100+ vehicles available at our Bulandshahr showroom, we focus on genuine customer service, clear pricing, and transparent deals.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Section: Vehicle Quality Check & Inspection ── */}
+      <section id="quality-check" className="section scroll-mt-20" style={{ background: "var(--color-surface)" }}>
+        <div className="container-fm">
+          <div className="text-center mb-10 max-w-2xl mx-auto">
+            <p className="text-xs font-bold uppercase tracking-widest mb-2" style={{ color: "var(--color-red-brand)" }}>
+              Transparent Quality Assurance
+            </p>
+            <h2 className="text-3xl sm:text-4xl font-extrabold mb-3" style={{ color: "var(--color-navy-900)", fontFamily: "var(--font-heading)" }}>
+              Vehicle Quality Check &amp; Evaluation
+            </h2>
+            <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+              Before we list any car, our experienced team evaluates 10 key operational areas so you can browse with complete confidence.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+            {INSPECTION_CATEGORIES.map((cat) => (
+              <div
+                key={cat.name}
+                className="rounded-xl p-4 text-center bg-white shadow-sm transition-all hover:shadow"
+                style={{ border: "1px solid #e5e7eb" }}
+              >
+                <div className="text-3xl mb-2">{cat.icon}</div>
+                <h3 className="font-bold text-sm mb-1" style={{ color: "var(--color-navy-900)" }}>{cat.name}</h3>
+                <p className="text-xs text-gray-500 leading-relaxed">{cat.desc}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Quality Policy Callout */}
+          <div className="mt-8 max-w-3xl mx-auto rounded-xl p-5" style={{ background: "#fef9c3", border: "1px solid #fde68a" }}>
+            <p className="text-sm text-amber-900 leading-relaxed">
+              <strong>Transparent Policy:</strong> Inspection findings vary by vehicle age and history. We encourage every buyer to physically inspect and test drive their shortlisted car at our Bulandshahr showroom. Detailed vehicle histories and documentation are shared openly with you.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Our Showroom */}
       <section className="section" style={{ background: "white" }}>
         <div className="container-fm">
@@ -160,7 +263,6 @@ export default function AboutPage() {
                   alt="First Motors Showroom - Chandpur Road, Bulandshahr"
                   fill
                   className="object-cover object-center group-hover:scale-[1.01] transition-transform duration-500"
-                  priority
                   sizes="(max-width: 1024px) 100vw, 896px"
                 />
               </div>
@@ -190,7 +292,7 @@ export default function AboutPage() {
             Ready to Find Your Next Car?
           </h2>
           <p className="text-slate-300 mb-8 max-w-lg mx-auto text-sm sm:text-base">
-            Browse our selected online collection or connect with Shariq Ansari (8267871486) and Shamir Khan (9953950721).
+            Browse our selected online collection or connect with Shariq Ansari (8267871486) and Mohd Rehan Khan (9997460658).
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link href="/buy" className="btn btn-primary px-8">Browse Cars</Link>

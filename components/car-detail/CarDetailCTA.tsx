@@ -101,8 +101,8 @@ export default function CarDetailCTA({ car, whatsappLink }: CarDetailCTAProps) {
           <a href="tel:+918267871486" className="font-bold text-navy-800 hover:text-red-600">82678 71486</a>
         </div>
         <div className="flex justify-between items-center py-0.5">
-          <span>Shamir Khan</span>
-          <a href="tel:+919953950721" className="font-bold text-navy-800 hover:text-red-600">99539 50721</a>
+          <span>Mohd Rehan Khan</span>
+          <a href="tel:+919997460658" className="font-bold text-navy-800 hover:text-red-600">99974 60658</a>
         </div>
       </div>
 
