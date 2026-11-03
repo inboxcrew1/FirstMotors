@@ -46,9 +46,11 @@ export interface CarListing {
 
   // Ownership & history
   ownership: OwnershipType;
-  kmDriven: number;
+  kmDriven?: number;
   registrationYear: number;
   registrationState: string;
+  registrationNumber?: string;
+  cngType?: string;
   insuranceExpiry?: string; // "MM/YYYY" or "Expired"
   insuranceType?: "Comprehensive" | "Third Party";
   hypothecation?: boolean; // loan on car

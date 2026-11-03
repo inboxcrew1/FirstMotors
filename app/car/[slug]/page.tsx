@@ -153,26 +153,24 @@ export default async function CarDetailPage({ params }: Props) {
           {/* Main Title Section - Semantic H1 visible on ALL devices (Desktop, Tablet, Mobile) */}
           <div className="mb-6">
             {car.status === "sold" && (
-              <div className="mb-4 p-4 rounded-xl bg-gradient-to-r from-red-50 to-amber-50 border border-amber-300 flex flex-col sm:flex-row sm:items-center justify-between gap-3 shadow-sm">
+              <div className="mb-4 p-4 rounded-xl bg-gradient-to-r from-red-50 to-amber-50 border border-red-200 flex flex-col sm:flex-row sm:items-center justify-between gap-3 shadow-sm">
                 <div className="flex items-center gap-3">
-                  <span className="badge badge-red font-black px-3 py-1 text-xs uppercase tracking-wider">SOLD</span>
+                  <span className="badge badge-red font-black px-3 py-1 text-xs uppercase tracking-wider">SOLD OUT</span>
                   <div>
                     <p className="text-sm font-bold text-gray-900">
-                      This vehicle has been marked as SOLD
+                      This vehicle is SOLD OUT
                     </p>
-                    <p className="text-xs font-bold text-amber-800">
-                      Next stock available on 01-11-2026 8PM
+                    <p className="text-xs text-gray-600">
+                      Enquiries and booking are closed for this vehicle. Check our available stock.
                     </p>
                   </div>
                 </div>
-                <a
-                  href={whatsappLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn btn-whatsapp text-xs py-2 px-3.5 self-start sm:self-auto"
+                <Link
+                  href="/buy"
+                  className="btn btn-secondary text-xs py-2 px-3.5 self-start sm:self-auto font-bold"
                 >
-                  Enquire Next Stock
-                </a>
+                  Browse Available Cars
+                </Link>
               </div>
             )}
             <div className="flex flex-wrap items-center gap-2 mb-2">
@@ -185,8 +183,15 @@ export default async function CarDetailPage({ params }: Props) {
                   ✓ Quality Checked
                 </span>
               )}
+              {car.status === "available" && (
+                <span className="badge bg-emerald-600 text-white font-black text-xs uppercase px-2.5 py-0.5">
+                  AVAILABLE
+                </span>
+              )}
               {car.status === "sold" && (
-                <span className="badge badge-red">SOLD</span>
+                <span className="badge badge-red font-black text-xs uppercase px-2.5 py-0.5">
+                  SOLD OUT
+                </span>
               )}
             </div>
             <h1
@@ -257,12 +262,18 @@ export default async function CarDetailPage({ params }: Props) {
                   )}
                   {car.status === "sold" && (
                     <div className="p-3 bg-red-50 border border-red-200 rounded-lg text-center">
-                      <div className="badge badge-red w-full justify-center py-1.5 text-sm font-bold mb-1">
-                        This car has been SOLD
+                      <div className="badge badge-red w-full justify-center py-1.5 text-sm font-bold mb-1 uppercase tracking-wider">
+                        SOLD OUT
                       </div>
-                      <p className="text-xs font-bold text-amber-800">
-                        Next stock available on 01-11-2026 8PM
+                      <p className="text-xs text-gray-600 mb-2">
+                        This vehicle is no longer accepting enquiries.
                       </p>
+                      <Link
+                        href="/buy"
+                        className="btn btn-primary w-full justify-center text-xs py-2"
+                      >
+                        Browse Available Cars
+                      </Link>
                     </div>
                   )}
                 </div>

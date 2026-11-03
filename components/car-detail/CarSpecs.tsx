@@ -9,8 +9,8 @@ interface CarSpecsProps {
 export default function CarSpecs({ car }: CarSpecsProps) {
   const rawSpecs = [
     { icon: Calendar, label: "Registration Year", value: car.registrationYear },
-    { icon: Gauge, label: "KM Driven", value: formatKmExact(car.kmDriven) },
-    { icon: Fuel, label: "Fuel Type", value: car.fuelType },
+    car.kmDriven ? { icon: Gauge, label: "KM Driven", value: formatKmExact(car.kmDriven) } : null,
+    { icon: Fuel, label: "Fuel Type", value: car.cngType ? `${car.fuelType} (${car.cngType})` : car.fuelType },
     { icon: Settings2, label: "Transmission", value: car.transmission },
     car.engine ? { icon: Cog, label: "Engine", value: car.engine } : null,
     car.mileage ? { icon: Zap, label: "Mileage", value: car.mileage } : null,
@@ -18,7 +18,13 @@ export default function CarSpecs({ car }: CarSpecsProps) {
     car.bodyType ? { icon: Car, label: "Body Type", value: car.bodyType } : null,
     { icon: Users, label: "Seating", value: `${car.seats} Seats` },
     { icon: Palette, label: "Colour", value: car.color },
-    { icon: FileText, label: "Registration", value: `${car.registrationState} Registration` },
+    {
+      icon: FileText,
+      label: "Registration",
+      value: car.registrationNumber
+        ? `${car.registrationNumber} (${car.registrationState})`
+        : `${car.registrationState} Registration`,
+    },
     {
       icon: Shield,
       label: "Insurance",

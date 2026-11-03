@@ -6,6 +6,658 @@
 import type { CarListing } from "@/lib/types";
 
 const INVENTORY: CarListing[] = [
+  // ===========================================================================
+  // NEW ARRIVALS (AVAILABLE STOCK)
+  // ===========================================================================
+  {
+    id: "maruti-suzuki-celerio-lxi-cng-2019",
+    stockId: "FM-2019-CELERIO-LXI",
+    slug: "maruti-suzuki-celerio-lxi-cng-2019",
+
+    // Vehicle info
+    brand: "Maruti Suzuki",
+    model: "Celerio",
+    variant: "LXI",
+    year: 2019,
+    color: "Grey",
+
+    // Specs
+    fuelType: "Petrol + CNG",
+    cngType: "Green CNG",
+    transmission: "Manual",
+    seats: 5,
+    bodyType: "Hatchback",
+
+    // Ownership & history
+    ownership: "2nd Owner",
+    kmDriven: 72326,
+    registrationYear: 2019,
+    registrationState: "Delhi",
+    registrationNumber: "DL5G",
+    insuranceExpiry: "Valid",
+    insuranceType: "Comprehensive",
+    hypothecation: false,
+    accidentHistory: false,
+
+    // Pricing
+    price: 3.60,
+    priceNegotiable: true,
+
+    // Location
+    location: "Bulandshahr",
+    dealerCity: "Bulandshahr",
+
+    // Status
+    status: "available",
+    featured: true,
+    verified: true,
+
+    // Images
+    thumbnailUrl: "/cars/maruti-suzuki-celerio-lxi-cng-2019/01-front.jpg",
+    images: [
+      {
+        url: "/cars/maruti-suzuki-celerio-lxi-cng-2019/01-front.jpg",
+        alt: "2019 Maruti Suzuki Celerio LXI Petrol + CNG front view at First Motors Bulandshahr",
+        type: "exterior_front",
+      },
+      {
+        url: "/cars/maruti-suzuki-celerio-lxi-cng-2019/02-front-right.jpg",
+        alt: "Maruti Suzuki Celerio LXI front right quarter profile",
+        type: "exterior_front",
+      },
+      {
+        url: "/cars/maruti-suzuki-celerio-lxi-cng-2019/03-rear.jpg",
+        alt: "Maruti Suzuki Celerio LXI rear profile view",
+        type: "exterior_rear",
+      },
+      {
+        url: "/cars/maruti-suzuki-celerio-lxi-cng-2019/04-side.jpg",
+        alt: "Maruti Suzuki Celerio LXI side profile view",
+        type: "side",
+      },
+      {
+        url: "/cars/maruti-suzuki-celerio-lxi-cng-2019/05-dashboard.jpg",
+        alt: "Maruti Suzuki Celerio LXI instrument cluster and dashboard showing 72326 km",
+        type: "dashboard",
+      },
+      {
+        url: "/cars/maruti-suzuki-celerio-lxi-cng-2019/06-interior.jpg",
+        alt: "Maruti Suzuki Celerio LXI cabin interior and seating",
+        type: "interior",
+      },
+      {
+        url: "/cars/maruti-suzuki-celerio-lxi-cng-2019/07-boot-cng.jpg",
+        alt: "Maruti Suzuki Celerio LXI boot space with Green CNG cylinder installation",
+        type: "boot",
+      },
+      {
+        url: "/cars/maruti-suzuki-celerio-lxi-cng-2019/08-engine.jpg",
+        alt: "Maruti Suzuki Celerio LXI clean engine bay",
+        type: "engine",
+      },
+    ],
+
+    // Description
+    description:
+      "2019 Maruti Suzuki Celerio LXI in Grey finish, registered in Delhi (DL5G). 2nd Owner vehicle with 72,326 km driven. Dual fuel Petrol + Green CNG setup with manual transmission. Known for outstanding fuel economy, low maintenance costs, and smooth city drivability. Available for physical inspection and test drive at First Motors showroom, Chandpur Road, Bulandshahr.",
+
+    // Features
+    features: [
+      "Green CNG Kit",
+      "Power Steering",
+      "Air Conditioning",
+      "Driver Airbag",
+      "ABS with EBD",
+      "Body Coloured Bumpers",
+    ],
+
+    // Metadata
+    listedDate: "2026-11-01T00:00:00.000Z",
+    updatedDate: "2026-11-03T16:00:00.000Z",
+  },
+  {
+    id: "maruti-suzuki-wagonr-lxi-cng-2021",
+    stockId: "FM-2021-WAGONR-LXI",
+    slug: "maruti-suzuki-wagonr-lxi-cng-2021",
+
+    // Vehicle info
+    brand: "Maruti Suzuki",
+    model: "WagonR",
+    variant: "LXI",
+    year: 2021,
+    color: "Nutmeg Brown",
+
+    // Specs
+    fuelType: "Petrol + CNG",
+    cngType: "Green CNG",
+    transmission: "Manual",
+    seats: 5,
+    bodyType: "Hatchback",
+
+    // Ownership & history
+    ownership: "1st Owner",
+    registrationYear: 2021,
+    registrationState: "Delhi",
+    registrationNumber: "DL 5CS 9566",
+    insuranceExpiry: "Valid",
+    insuranceType: "Comprehensive",
+    hypothecation: false,
+    accidentHistory: false,
+
+    // Pricing
+    price: 4.25,
+    priceNegotiable: true,
+
+    // Location
+    location: "Bulandshahr",
+    dealerCity: "Bulandshahr",
+
+    // Status
+    status: "available",
+    featured: true,
+    verified: true,
+
+    // Images
+    thumbnailUrl: "/cars/maruti-suzuki-wagonr-lxi-cng-2021/01-front.jpg",
+    images: [
+      {
+        url: "/cars/maruti-suzuki-wagonr-lxi-cng-2021/01-front.jpg",
+        alt: "2021 Maruti Suzuki WagonR LXI Green CNG Nutmeg Brown front view DL 5CS 9566",
+        type: "exterior_front",
+      },
+      {
+        url: "/cars/maruti-suzuki-wagonr-lxi-cng-2021/02-front-right.jpg",
+        alt: "Maruti Suzuki WagonR LXI front right quarter view",
+        type: "exterior_front",
+      },
+      {
+        url: "/cars/maruti-suzuki-wagonr-lxi-cng-2021/03-side.jpg",
+        alt: "Maruti Suzuki WagonR LXI tall-boy side profile",
+        type: "side",
+      },
+      {
+        url: "/cars/maruti-suzuki-wagonr-lxi-cng-2021/04-rear.jpg",
+        alt: "Maruti Suzuki WagonR LXI rear view showing registration plate DL 5CS 9566",
+        type: "exterior_rear",
+      },
+      {
+        url: "/cars/maruti-suzuki-wagonr-lxi-cng-2021/05-rear-left.jpg",
+        alt: "Maruti Suzuki WagonR LXI rear left angle",
+        type: "exterior_rear",
+      },
+      {
+        url: "/cars/maruti-suzuki-wagonr-lxi-cng-2021/06-dashboard.jpg",
+        alt: "Maruti Suzuki WagonR LXI modern dashboard and dual-tone console",
+        type: "dashboard",
+      },
+      {
+        url: "/cars/maruti-suzuki-wagonr-lxi-cng-2021/07-interior.jpg",
+        alt: "Maruti Suzuki WagonR LXI spacious front cabin",
+        type: "interior",
+      },
+      {
+        url: "/cars/maruti-suzuki-wagonr-lxi-cng-2021/08-seats.jpg",
+        alt: "Maruti Suzuki WagonR LXI comfortable rear passenger seats",
+        type: "seats",
+      },
+      {
+        url: "/cars/maruti-suzuki-wagonr-lxi-cng-2021/09-boot-cng.jpg",
+        alt: "Maruti Suzuki WagonR LXI boot with factory-fitted Green CNG tank",
+        type: "boot",
+      },
+      {
+        url: "/cars/maruti-suzuki-wagonr-lxi-cng-2021/10-engine.jpg",
+        alt: "Maruti Suzuki WagonR LXI clean 1.0L K-Series engine bay",
+        type: "engine",
+      },
+      {
+        url: "/cars/maruti-suzuki-wagonr-lxi-cng-2021/11-meter.jpg",
+        alt: "Maruti Suzuki WagonR LXI instrument cluster",
+        type: "odometer",
+      },
+      {
+        url: "/cars/maruti-suzuki-wagonr-lxi-cng-2021/12-tyre.jpg",
+        alt: "Maruti Suzuki WagonR LXI wheel and tyre condition",
+        type: "other",
+      },
+      {
+        url: "/cars/maruti-suzuki-wagonr-lxi-cng-2021/13-details.jpg",
+        alt: "Maruti Suzuki WagonR LXI exterior finish and chrome garnish",
+        type: "other",
+      },
+    ],
+
+    // Description
+    description:
+      "2021 Maruti Suzuki WagonR LXI in elegant Nutmeg Brown finish, registered in Delhi (DL 5CS 9566). 1st Owner vehicle. Dual fuel Petrol + Green CNG setup with manual transmission. Features Maruti's spacious Heartect platform tall-boy cabin, front power windows, dual airbags, ABS with EBD, and exceptional fuel economy. Available for test drive at First Motors Bulandshahr.",
+
+    // Features
+    features: [
+      "Factory Fitted Green CNG",
+      "Front Power Windows",
+      "Power Steering",
+      "Dual Airbags",
+      "ABS with EBD",
+      "Rear Parking Sensors",
+      "Central Locking",
+    ],
+
+    // Metadata
+    listedDate: "2026-11-01T00:00:00.000Z",
+    updatedDate: "2026-11-03T16:00:00.000Z",
+  },
+  {
+    id: "maruti-suzuki-eeco-cng-2023",
+    stockId: "FM-2023-EECO-CNG",
+    slug: "maruti-suzuki-eeco-cng-2023",
+
+    // Vehicle info
+    brand: "Maruti Suzuki",
+    model: "Eeco",
+    variant: "5 STR AC CNG",
+    year: 2023,
+    color: "Solid White",
+
+    // Specs
+    fuelType: "Petrol + CNG",
+    transmission: "Manual",
+    seats: 5,
+    bodyType: "Van",
+
+    // Ownership & history
+    ownership: "1st Owner",
+    registrationYear: 2023,
+    registrationState: "Uttar Pradesh",
+    registrationNumber: "UP 13 CB 4294",
+    insuranceExpiry: "Valid",
+    insuranceType: "Comprehensive",
+    hypothecation: false,
+    accidentHistory: false,
+
+    // Pricing
+    price: 4.70,
+    priceNegotiable: true,
+
+    // Location
+    location: "Bulandshahr",
+    dealerCity: "Bulandshahr",
+
+    // Status
+    status: "available",
+    featured: true,
+    verified: true,
+
+    // Images
+    thumbnailUrl: "/cars/maruti-suzuki-eeco-cng-2023/01-front.jpg",
+    images: [
+      {
+        url: "/cars/maruti-suzuki-eeco-cng-2023/01-front.jpg",
+        alt: "2023 Maruti Suzuki Eeco 5 STR AC CNG Solid White front view UP 13 CB 4294",
+        type: "exterior_front",
+      },
+      {
+        url: "/cars/maruti-suzuki-eeco-cng-2023/02-front-right.jpg",
+        alt: "Maruti Suzuki Eeco CNG front right angle view",
+        type: "exterior_front",
+      },
+      {
+        url: "/cars/maruti-suzuki-eeco-cng-2023/03-side.jpg",
+        alt: "Maruti Suzuki Eeco CNG sliding door side profile",
+        type: "side",
+      },
+      {
+        url: "/cars/maruti-suzuki-eeco-cng-2023/04-rear.jpg",
+        alt: "Maruti Suzuki Eeco CNG rear tailgate showing UP 13 CB 4294 plate",
+        type: "exterior_rear",
+      },
+      {
+        url: "/cars/maruti-suzuki-eeco-cng-2023/05-rear-left.jpg",
+        alt: "Maruti Suzuki Eeco CNG rear left perspective",
+        type: "exterior_rear",
+      },
+      {
+        url: "/cars/maruti-suzuki-eeco-cng-2023/06-dashboard.jpg",
+        alt: "Maruti Suzuki Eeco CNG updated digital instrument cluster and dashboard",
+        type: "dashboard",
+      },
+      {
+        url: "/cars/maruti-suzuki-eeco-cng-2023/07-interior.jpg",
+        alt: "Maruti Suzuki Eeco CNG driver and front passenger seating cabin",
+        type: "interior",
+      },
+      {
+        url: "/cars/maruti-suzuki-eeco-cng-2023/08-seats.jpg",
+        alt: "Maruti Suzuki Eeco CNG passenger cabin seating",
+        type: "seats",
+      },
+      {
+        url: "/cars/maruti-suzuki-eeco-cng-2023/09-boot-cng.jpg",
+        alt: "Maruti Suzuki Eeco CNG rear luggage compartment and CNG tank",
+        type: "boot",
+      },
+      {
+        url: "/cars/maruti-suzuki-eeco-cng-2023/10-engine.jpg",
+        alt: "Maruti Suzuki Eeco CNG advanced K-Series engine compartment",
+        type: "engine",
+      },
+      {
+        url: "/cars/maruti-suzuki-eeco-cng-2023/11-meter.jpg",
+        alt: "Maruti Suzuki Eeco CNG speedometer display",
+        type: "odometer",
+      },
+    ],
+
+    // Description
+    description:
+      "2023 Maruti Suzuki Eeco 5 Seater AC with factory CNG in pristine Solid White finish. Local Bulandshahr registration (UP 13 CB 4294). 1st Owner vehicle. Equipped with 1.2L K-Series Dual Jet engine, factory-fitted CNG, powerful air conditioning, digital instrument cluster, dual airbags, and reverse parking sensors. Perfect multi-purpose vehicle for family and business use. Available at First Motors showroom, Bulandshahr.",
+
+    // Features
+    features: [
+      "Factory Fitted CNG",
+      "Powerful Air Conditioning",
+      "Digital Instrument Cluster",
+      "Dual Airbags",
+      "ABS with EBD",
+      "Reverse Parking Sensors",
+      "Sliding Doors",
+    ],
+
+    // Metadata
+    listedDate: "2026-11-01T00:00:00.000Z",
+    updatedDate: "2026-11-03T16:00:00.000Z",
+  },
+  {
+    id: "maruti-suzuki-wagonr-lxi-cng-2024",
+    stockId: "FM-2024-WAGONR-LXI",
+    slug: "maruti-suzuki-wagonr-lxi-cng-2024",
+
+    // Vehicle info
+    brand: "Maruti Suzuki",
+    model: "WagonR",
+    variant: "LXI",
+    year: 2024,
+    color: "Grey",
+
+    // Specs
+    fuelType: "Petrol + CNG",
+    cngType: "Green CNG",
+    transmission: "Manual",
+    seats: 5,
+    bodyType: "Hatchback",
+
+    // Ownership & history
+    ownership: "1st Owner",
+    registrationYear: 2024,
+    registrationState: "Haryana",
+    registrationNumber: "HR26GB2803",
+    insuranceExpiry: "Valid",
+    insuranceType: "Comprehensive",
+    hypothecation: false,
+    accidentHistory: false,
+
+    // Pricing
+    price: 5.25,
+    priceNegotiable: true,
+
+    // Location
+    location: "Bulandshahr",
+    dealerCity: "Bulandshahr",
+
+    // Status
+    status: "available",
+    featured: true,
+    verified: true,
+
+    // Images
+    thumbnailUrl: "/cars/maruti-suzuki-wagonr-lxi-cng-2024/01-front.jpg",
+    images: [
+      {
+        url: "/cars/maruti-suzuki-wagonr-lxi-cng-2024/01-front.jpg",
+        alt: "2024 Maruti Suzuki WagonR LXI Green CNG Magma Grey front view HR26GB2803",
+        type: "exterior_front",
+      },
+      {
+        url: "/cars/maruti-suzuki-wagonr-lxi-cng-2024/02-rear.jpg",
+        alt: "2024 Maruti Suzuki WagonR LXI Green CNG Magma Grey rear view at First Motors",
+        type: "exterior_rear",
+      },
+    ],
+
+    // Description
+    description:
+      "Latest 2024 Maruti Suzuki WagonR LXI in Magma Grey finish, registered in Gurgaon, Haryana (HR26GB2803). 1st Owner vehicle in immaculate condition. Equipped with advanced Dual Jet K-Series engine with factory Green CNG setup. Delivers unbeatable fuel efficiency (over 34 km/kg), spacious cabin with high roofline, dual airbags, ABS with EBD, and ESP. Available for inspection at First Motors Bulandshahr.",
+
+    // Features
+    features: [
+      "Factory Fitted Green CNG",
+      "Front Power Windows",
+      "Electronic Stability Program (ESP)",
+      "Dual Airbags",
+      "ABS with EBD",
+      "Speed Alert System",
+      "Reverse Parking Sensors",
+    ],
+
+    // Metadata
+    listedDate: "2026-11-01T00:00:00.000Z",
+    updatedDate: "2026-11-03T16:00:00.000Z",
+  },
+  {
+    id: "maruti-suzuki-alto-k10-vxi-cng-2017",
+    stockId: "FM-2017-ALTO-K10-GREY",
+    slug: "maruti-suzuki-alto-k10-vxi-cng-2017",
+
+    // Vehicle info
+    brand: "Maruti Suzuki",
+    model: "Alto K10",
+    variant: "VXI",
+    year: 2017,
+    color: "Grey",
+
+    // Specs
+    fuelType: "Petrol + CNG",
+    cngType: "CNG Pass",
+    transmission: "Manual",
+    seats: 5,
+    bodyType: "Hatchback",
+
+    // Ownership & history
+    ownership: "1st Owner",
+    registrationYear: 2017,
+    registrationState: "Delhi",
+    registrationNumber: "DL9CAN7019",
+    insuranceExpiry: "Valid",
+    insuranceType: "Comprehensive",
+    hypothecation: false,
+    accidentHistory: false,
+
+    // Pricing
+    price: 2.70,
+    priceNegotiable: true,
+
+    // Location
+    location: "Bulandshahr",
+    dealerCity: "Bulandshahr",
+
+    // Status
+    status: "available",
+    featured: true,
+    verified: true,
+
+    // Images
+    thumbnailUrl: "/cars/maruti-suzuki-alto-k10-vxi-cng-2017/01-front.jpg",
+    images: [
+      {
+        url: "/cars/maruti-suzuki-alto-k10-vxi-cng-2017/01-front.jpg",
+        alt: "2017 Maruti Suzuki Alto K10 VXI Grey Petrol + CNG front view DL9CAN7019",
+        type: "exterior_front",
+      },
+      {
+        url: "/cars/maruti-suzuki-alto-k10-vxi-cng-2017/02-front-right.jpg",
+        alt: "Maruti Suzuki Alto K10 VXI front right quarter view",
+        type: "exterior_front",
+      },
+      {
+        url: "/cars/maruti-suzuki-alto-k10-vxi-cng-2017/03-rear.jpg",
+        alt: "Maruti Suzuki Alto K10 VXI rear view showing DL9CAN7019 registration plate",
+        type: "exterior_rear",
+      },
+      {
+        url: "/cars/maruti-suzuki-alto-k10-vxi-cng-2017/04-rear-left.jpg",
+        alt: "Maruti Suzuki Alto K10 VXI rear left quarter angle",
+        type: "exterior_rear",
+      },
+      {
+        url: "/cars/maruti-suzuki-alto-k10-vxi-cng-2017/05-interior.jpg",
+        alt: "Maruti Suzuki Alto K10 VXI interior front seats and cabin",
+        type: "interior",
+      },
+      {
+        url: "/cars/maruti-suzuki-alto-k10-vxi-cng-2017/06-dashboard.jpg",
+        alt: "Maruti Suzuki Alto K10 VXI dashboard with audio system and AC controls",
+        type: "dashboard",
+      },
+      {
+        url: "/cars/maruti-suzuki-alto-k10-vxi-cng-2017/07-boot-cng.jpg",
+        alt: "Maruti Suzuki Alto K10 VXI boot with endorsed CNG cylinder",
+        type: "boot",
+      },
+      {
+        url: "/cars/maruti-suzuki-alto-k10-vxi-cng-2017/08-engine.jpg",
+        alt: "Maruti Suzuki Alto K10 VXI 1.0L K10B engine bay",
+        type: "engine",
+      },
+    ],
+
+    // Description
+    description:
+      "2017 Maruti Suzuki Alto K10 VXI in Grey finish, registered in Delhi (DL9CAN7019). 1st Owner vehicle with CNG endorsement on RC (CNG Pass). Powered by the peppy 1.0L K10B engine offering great pick-up and economical running costs. Equipped with Front Power Windows, Power Steering, Air Conditioning, Audio System, and Central Locking. Available at First Motors showroom, Bulandshahr.",
+
+    // Features
+    features: [
+      "Endorsed CNG Kit (CNG Pass)",
+      "Power Steering",
+      "Front Power Windows",
+      "Manual Air Conditioning",
+      "In-dash Audio System",
+      "Central Locking",
+      "Driver Airbag",
+    ],
+
+    // Metadata
+    listedDate: "2026-11-01T00:00:00.000Z",
+    updatedDate: "2026-11-03T16:00:00.000Z",
+  },
+  {
+    id: "maruti-suzuki-swift-lxi-cng-2018",
+    stockId: "FM-2018-SWIFT-LXI-CNG",
+    slug: "maruti-suzuki-swift-lxi-cng-2018",
+
+    // Vehicle info
+    brand: "Maruti Suzuki",
+    model: "Swift",
+    variant: "LXI",
+    year: 2018,
+    color: "Midnight Brown",
+
+    // Specs
+    fuelType: "Petrol + CNG",
+    transmission: "Manual",
+    seats: 5,
+    bodyType: "Hatchback",
+
+    // Ownership & history
+    ownership: "1st Owner",
+    kmDriven: 69000,
+    registrationYear: 2018,
+    registrationState: "Delhi",
+    registrationNumber: "DL2CAZ2793",
+    insuranceExpiry: "Valid",
+    insuranceType: "Comprehensive",
+    hypothecation: false,
+    accidentHistory: false,
+
+    // Pricing
+    price: 3.85,
+    priceNegotiable: true,
+
+    // Location
+    location: "Bulandshahr",
+    dealerCity: "Bulandshahr",
+
+    // Status
+    status: "available",
+    featured: true,
+    verified: true,
+
+    // Images
+    thumbnailUrl: "/cars/maruti-suzuki-swift-lxi-cng-2018/01-front.jpg",
+    images: [
+      {
+        url: "/cars/maruti-suzuki-swift-lxi-cng-2018/01-front.jpg",
+        alt: "2018 Maruti Suzuki Swift LXI Petrol + CNG Midnight Brown front view DL2CAZ2793",
+        type: "exterior_front",
+      },
+      {
+        url: "/cars/maruti-suzuki-swift-lxi-cng-2018/02-front-right.jpg",
+        alt: "Maruti Suzuki Swift LXI front right quarter profile",
+        type: "exterior_front",
+      },
+      {
+        url: "/cars/maruti-suzuki-swift-lxi-cng-2018/03-side.jpg",
+        alt: "Maruti Suzuki Swift LXI sporty hatchback side profile",
+        type: "side",
+      },
+      {
+        url: "/cars/maruti-suzuki-swift-lxi-cng-2018/04-rear.jpg",
+        alt: "Maruti Suzuki Swift LXI rear view showing registration DL2CAZ2793",
+        type: "exterior_rear",
+      },
+      {
+        url: "/cars/maruti-suzuki-swift-lxi-cng-2018/05-dashboard.jpg",
+        alt: "Maruti Suzuki Swift LXI sporty cockpit dashboard and instrument cluster showing 69010 km",
+        type: "dashboard",
+      },
+      {
+        url: "/cars/maruti-suzuki-swift-lxi-cng-2018/06-interior.jpg",
+        alt: "Maruti Suzuki Swift LXI front seats and interior cabin",
+        type: "interior",
+      },
+      {
+        url: "/cars/maruti-suzuki-swift-lxi-cng-2018/07-boot-cng.jpg",
+        alt: "Maruti Suzuki Swift LXI boot with CNG cylinder installation",
+        type: "boot",
+      },
+      {
+        url: "/cars/maruti-suzuki-swift-lxi-cng-2018/08-engine.jpg",
+        alt: "Maruti Suzuki Swift LXI 1.2L 4-cylinder K-Series engine bay",
+        type: "engine",
+      },
+    ],
+
+    // Description
+    description:
+      "2018 Maruti Suzuki Swift LXI in Midnight Brown finish, registered in Delhi (DL2CAZ2793). 1st Owner vehicle with 69,000 km verified odometer. Dual fuel Petrol + CNG setup with 5-speed manual transmission. Features Power Steering, Front & Rear Power Windows, Dual Airbags, and ABS with EBD. Valid insurance and zero active loan (no hypothecation). Available for test drive at First Motors Bulandshahr.",
+
+    // Features
+    features: [
+      "Power Steering",
+      "Front & Rear Power Windows",
+      "Dual Airbags",
+      "ABS with EBD",
+      "CNG Fuel Setup",
+      "Air Conditioning",
+      "Clear Title & Valid Insurance",
+    ],
+
+    // Metadata
+    listedDate: "2026-11-01T00:00:00.000Z",
+    updatedDate: "2026-11-03T16:00:00.000Z",
+  },
+
+  // ===========================================================================
+  // PREVIOUS STOCK (SOLD OUT)
+  // ===========================================================================
   {
     id: "maruti-suzuki-alto-k10-vxi-2017",
     stockId: "FM-2017-ALTO",
@@ -43,7 +695,7 @@ const INVENTORY: CarListing[] = [
 
     // Status
     status: "sold",
-    featured: true,
+    featured: false,
     verified: true,
 
     // Images
@@ -169,7 +821,7 @@ const INVENTORY: CarListing[] = [
 
     // Status
     status: "sold",
-    featured: true,
+    featured: false,
     verified: true,
 
     // Images
@@ -255,7 +907,7 @@ const INVENTORY: CarListing[] = [
 
     // Status
     status: "sold",
-    featured: true,
+    featured: false,
     verified: true,
 
     // Images
@@ -361,7 +1013,7 @@ const INVENTORY: CarListing[] = [
 
     // Status
     status: "sold",
-    featured: true,
+    featured: false,
     verified: true,
 
     // Images
@@ -467,7 +1119,7 @@ const INVENTORY: CarListing[] = [
 
     // Status
     status: "sold",
-    featured: true,
+    featured: false,
     verified: true,
 
     // Images
@@ -533,7 +1185,7 @@ const INVENTORY: CarListing[] = [
 
     // Status
     status: "sold",
-    featured: true,
+    featured: false,
     verified: true,
 
     // Images
@@ -599,7 +1251,7 @@ const INVENTORY: CarListing[] = [
 
     // Status
     status: "sold",
-    featured: true,
+    featured: false,
     verified: true,
 
     // Images

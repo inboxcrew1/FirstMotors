@@ -26,7 +26,8 @@ export function formatKm(km: number): string {
   return `${km} km`;
 }
 
-export function formatKmExact(km: number): string {
+export function formatKmExact(km?: number): string {
+  if (km === undefined || km === null || isNaN(km)) return "Available on request";
   return km.toLocaleString("en-IN") + " km";
 }
 

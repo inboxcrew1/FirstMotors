@@ -54,7 +54,7 @@ export default function InventoryClient({ initialCars, availableBrands }: Invent
       if (filters.priceMax !== undefined && car.price > filters.priceMax) return false;
       if (filters.yearMin !== undefined && car.year < filters.yearMin) return false;
       if (filters.yearMax !== undefined && car.year > filters.yearMax) return false;
-      if (filters.kmMax !== undefined && car.kmDriven > filters.kmMax) return false;
+      if (filters.kmMax !== undefined && car.kmDriven !== undefined && car.kmDriven > filters.kmMax) return false;
       return true;
     });
 
@@ -62,8 +62,13 @@ export default function InventoryClient({ initialCars, availableBrands }: Invent
       case "price_asc": result = [...result].sort((a, b) => a.price - b.price); break;
       case "price_desc": result = [...result].sort((a, b) => b.price - a.price); break;
       case "newest": result = [...result].sort((a, b) => b.year - a.year); break;
-      case "lowest_km": result = [...result].sort((a, b) => a.kmDriven - b.kmDriven); break;
-      default: result = [...result].sort((a, b) => (b.featured ? 1 : 0) - (a.featured ? 1 : 0));
+      case "lowest_km": result = [...result].sort((a, b) => (a.kmDriven ?? 999999) - (b.kmDriven ?? 999999)); break;
+      default:
+        result = [...result].sort((a, b) => {
+          const statusScore = (b.status === "available" ? 1 : 0) - (a.status === "available" ? 1 : 0);
+          if (statusScore !== 0) return statusScore;
+          return (b.featured ? 1 : 0) - (a.featured ? 1 : 0);
+        });
     }
 
     return result;

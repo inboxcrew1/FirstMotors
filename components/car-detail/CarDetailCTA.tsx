@@ -44,11 +44,11 @@ export default function CarDetailCTA({ car, whatsappLink }: CarDetailCTAProps) {
       {/* Status */}
       {car.status === "sold" && (
         <div className="p-3 bg-red-50 border border-red-200 rounded-lg text-center mb-4">
-          <div className="badge badge-red w-full justify-center text-sm py-1.5 font-bold mb-1.5">
-            This car has been SOLD
+          <div className="badge badge-red w-full justify-center text-sm py-1.5 font-bold mb-1.5 uppercase tracking-wider">
+            SOLD OUT
           </div>
-          <p className="text-xs font-bold text-amber-800">
-            Next stock available on 01-11-2026 8PM
+          <p className="text-xs text-gray-600 font-medium">
+            This vehicle is sold out and no longer accepting enquiries or test drive bookings.
           </p>
         </div>
       )}
@@ -93,9 +93,23 @@ export default function CarDetailCTA({ car, whatsappLink }: CarDetailCTAProps) {
         )}
 
         {car.status !== "available" && (
-          <Link href="/buy" className="btn btn-secondary w-full justify-center">
-            Browse Similar Cars
-          </Link>
+          <>
+            <button
+              disabled
+              className="btn bg-gray-100 text-gray-400 border border-gray-200 w-full justify-center text-sm py-2.5 cursor-not-allowed font-medium select-none"
+            >
+              Test Drive Booking Closed
+            </button>
+            <button
+              disabled
+              className="btn bg-gray-100 text-gray-400 border border-gray-200 w-full justify-center text-sm py-2.5 cursor-not-allowed font-medium select-none"
+            >
+              WhatsApp Enquiries Disabled
+            </button>
+            <Link href="/buy" className="btn btn-primary w-full justify-center gap-2 mt-1">
+              Browse Available Cars
+            </Link>
+          </>
         )}
       </div>
 

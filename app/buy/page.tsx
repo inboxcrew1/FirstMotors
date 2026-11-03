@@ -82,23 +82,23 @@ export default function BuyPage() {
           </div>
 
           {/* Stock Update Banner */}
-          <div className="mt-4 p-4 rounded-xl bg-gradient-to-r from-red-50 via-amber-50 to-red-50 border border-amber-300 flex flex-col sm:flex-row sm:items-center justify-between gap-3 shadow-sm">
+          <div className="mt-4 p-4 rounded-xl bg-gradient-to-r from-emerald-50 via-teal-50 to-blue-50 border border-emerald-300 flex flex-col sm:flex-row sm:items-center justify-between gap-3 shadow-sm">
             <div>
               <div className="flex items-center gap-2">
-                <span className="bg-red-600 text-white font-black text-[11px] px-2.5 py-0.5 rounded uppercase tracking-wider">Stock Update</span>
-                <h3 className="font-bold text-sm sm:text-base text-navy-900">Current Online Showcase Vehicles are SOLD</h3>
+                <span className="bg-emerald-600 text-white font-black text-[11px] px-2.5 py-0.5 rounded uppercase tracking-wider">New Stock Available</span>
+                <h3 className="font-bold text-sm sm:text-base text-navy-900">Fresh Pre-Owned Inventory Just Arrived</h3>
               </div>
               <p className="text-xs sm:text-sm text-gray-700 mt-1">
-                Next stock available on <strong className="text-navy-900 font-extrabold">01-11-2026 8PM</strong>. Contact us to pre-book upcoming arrivals or visit our showroom on Chandpur Road for 100+ physical stock.
+                6 quality verified cars now available for inspection and test drive at our showroom on Chandpur Road, Bulandshahr. Previous showcase listings are marked SOLD OUT.
               </p>
             </div>
             <a
-              href={formatWhatsAppLink(SITE_CONFIG.whatsapp, "Hello First Motors, please notify me when the next stock is available on 01-11-2026 8PM.")}
+              href={formatWhatsAppLink(SITE_CONFIG.whatsapp, "Hello First Motors, I am interested in exploring your newly arrived inventory.")}
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-whatsapp text-xs py-2 px-3.5 whitespace-nowrap self-start sm:self-auto"
             >
-              Pre-Book Next Stock
+              WhatsApp Showroom
             </a>
           </div>
         </div>
