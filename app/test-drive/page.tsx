@@ -83,7 +83,7 @@ export default function TestDrivePage() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
             {[
-              { icon: "🎯", title: "Feel the Driving Comfort", desc: "Seating position, steering response, AC cooling, and cabin silence — experience the car first-hand." },
+              { icon: "🎯", title: "Feel the Driving Comfort", desc: "Seating position, steering response, AC cooling, and cabin silence to experience the car first-hand." },
               { icon: "🔧", title: "Engine & Transmission", desc: "Check clutch smoothness, gear transitions, and engine pickup under real driving conditions." },
               { icon: "🛣️", title: "Test on Bulandshahr Roads", desc: "Experience suspension, ground clearance, and braking on real local road surfaces." },
             ].map((item) => (

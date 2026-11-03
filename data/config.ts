@@ -1,5 +1,5 @@
 // =============================================================================
-// FIRST MOTORS — BUSINESS CONFIGURATION
+// FIRST MOTORS - BUSINESS CONFIGURATION
 // Official business details, contact persons, showroom address, and logo paths.
 // =============================================================================
 
@@ -68,10 +68,10 @@ export const SITE_CONFIG = {
   },
 
   hours: {
-    weekdays: "9:30 AM – 7:30 PM",
-    saturday: "9:30 AM – 7:30 PM",
-    sunday: "9:30 AM – 7:30 PM",
-    allDays: "9:30 AM – 7:30 PM (All 7 Days)",
+    weekdays: "9:30 AM - 7:30 PM",
+    saturday: "9:30 AM - 7:30 PM",
+    sunday: "9:30 AM - 7:30 PM",
+    allDays: "9:30 AM - 7:30 PM (All 7 Days)",
   },
 
   // Official Logo Assets

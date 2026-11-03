@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Privacy Policy | First Motors",
-  description: "Privacy Policy for First Motors website — how we collect, use and protect your personal information.",
+  description: "Privacy Policy for First Motors website: how we collect, use and protect your personal information.",
   alternates: {
     canonical: "https://firstmotorsbsr.com/privacy-policy",
   },

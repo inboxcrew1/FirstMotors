@@ -206,7 +206,7 @@ export default function Footer() {
               </h4>
               <div className="space-y-1 text-sm" style={{ color: "#9ca3af" }}>
                 <p className="text-white font-medium">Open All 7 Days</p>
-                <p>Mon – Sun: 9:30 AM – 7:30 PM</p>
+                <p>Mon to Sun: 9:30 AM - 7:30 PM</p>
               </div>
             </div>
           </div>

@@ -35,7 +35,7 @@ export default function ContactForm() {
         }),
       });
     } catch {
-      // Lead submission failed silently — WhatsApp/phone are backup contact methods
+      // Lead submission failed silently - WhatsApp/phone are backup contact methods
     }
     setLoading(false);
     setSubmitted(true);

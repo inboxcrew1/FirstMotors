@@ -1,5 +1,5 @@
 // =============================================================================
-// FIRST MOTORS — VEHICLE PHOTOGRAPHY COMPLIANCE & VERIFICATION METADATA
+// FIRST MOTORS - VEHICLE PHOTOGRAPHY COMPLIANCE & VERIFICATION METADATA
 // =============================================================================
 
 export interface VehiclePhotoMetadata {

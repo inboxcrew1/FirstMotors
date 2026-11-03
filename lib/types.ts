@@ -1,5 +1,5 @@
 // =============================================================================
-// FIRST MOTORS — TYPE DEFINITIONS
+// FIRST MOTORS - TYPE DEFINITIONS
 // =============================================================================
 
 export type FuelType = "Petrol" | "Diesel" | "CNG" | "Electric" | "Hybrid" | "Petrol + CNG";

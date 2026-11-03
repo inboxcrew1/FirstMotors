@@ -1,5 +1,5 @@
-﻿// =============================================================================
-// FIRST MOTORS — GA4 EVENT TRACKING HELPERS
+// =============================================================================
+// FIRST MOTORS - GA4 EVENT TRACKING HELPERS
 // Call these on user interactions to track leads in Google Analytics.
 // =============================================================================
 

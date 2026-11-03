@@ -3,7 +3,7 @@ import { NextResponse } from "next/server";
 import type { Lead } from "@/lib/types";
 
 // =============================================================================
-// FIRST MOTORS — LEAD API ROUTE
+// FIRST MOTORS - LEAD API ROUTE
 // This is a stub. Connect to a real backend/CRM/email service before going live.
 //
 // To activate email notifications, install resend: npm install resend

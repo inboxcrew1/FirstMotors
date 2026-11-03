@@ -4,7 +4,7 @@ import FAQClient from "./FAQClient";
 import { SITE_CONFIG } from "@/data/config";
 
 export const metadata: Metadata = {
-  title: "Frequently Asked Questions — Used Cars in Bulandshahr | First Motors",
+  title: "Frequently Asked Questions | Used Cars in Bulandshahr | First Motors",
   description:
     "Answers to common questions about buying, selling, and exchanging used cars in Bulandshahr. Learn about RC transfer, car finance, inspection, test drives & more at First Motors.",
   alternates: {
@@ -14,14 +14,14 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://firstmotorsbsr.com/faq",
     siteName: SITE_CONFIG.name,
-    title: "Frequently Asked Questions — Used Cars in Bulandshahr | First Motors",
+    title: "Frequently Asked Questions | Used Cars in Bulandshahr | First Motors",
     description:
       "Answers to common questions about buying, selling, and exchanging used cars in Bulandshahr. RC transfer, car finance, test drives & inspection.",
     images: [{ url: `${SITE_CONFIG.url}/showroom.jpg`, alt: "First Motors Showroom Bulandshahr" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Frequently Asked Questions — Used Cars in Bulandshahr | First Motors",
+    title: "Frequently Asked Questions | Used Cars in Bulandshahr | First Motors",
     description: "Common questions about used cars, RC transfer, car finance, and test drives in Bulandshahr.",
     images: [`${SITE_CONFIG.url}/showroom.jpg`],
   },
@@ -33,7 +33,7 @@ const FAQS = [
     items: [
       {
         q: "Where can I buy a reliable used car in Bulandshahr?",
-        a: "First Motors is a trusted pre-owned car dealer located on Chandpur Road, near Kalyan Singh Rajkiya Medical College, Bulandshahr, UP – 203001. We maintain 100+ vehicles at our physical showroom while featuring a selected inventory online. Call Shariq Ansari at 8267871486, Mohd Rehan Khan at 9997460658, or Mohd Nafees at 9917870158 for assistance.",
+        a: "First Motors is a trusted pre-owned car dealer located on Chandpur Road, near Kalyan Singh Rajkiya Medical College, Bulandshahr, UP - 203001. We maintain 100+ vehicles at our physical showroom while featuring a selected inventory online. Call Shariq Ansari at 8267871486, Mohd Rehan Khan at 9997460658, or Mohd Nafees at 9917870158 for assistance.",
       },
       {
         q: "How many cars are available at First Motors showroom?",
@@ -45,7 +45,7 @@ const FAQS = [
       },
       {
         q: "Can I test drive a car before buying?",
-        a: "Yes — we strongly encourage test drives. You can book a test drive through our website or by calling/WhatsApp-ing us directly. Our team will schedule a convenient slot for you.",
+        a: "Yes, we strongly encourage test drives. You can book a test drive through our website or by calling/WhatsApp-ing us directly. Our team will schedule a convenient slot for you.",
       },
       {
         q: "What is the process to buy a used car at First Motors?",
@@ -120,7 +120,7 @@ const FAQS = [
       },
       {
         q: "What documents are required for used car loan approval?",
-        a: "Common requirements: Aadhaar Card, PAN Card, last 3–6 months' bank statements, salary slips (for salaried) or ITR (for self-employed), and residence proof.",
+        a: "Common requirements: Aadhaar Card, PAN Card, last 3-6 months' bank statements, salary slips (for salaried) or ITR (for self-employed), and residence proof.",
       },
       {
         q: "What is the typical down payment for a used car?",
@@ -133,11 +133,11 @@ const FAQS = [
     items: [
       {
         q: "Where is First Motors showroom located?",
-        a: "First Motors is located on Chandpur Road, near Kalyan Singh Rajkiya Medical College, Bulandshahr, Uttar Pradesh – 203001. Directions are available on our Contact page and Google Maps.",
+        a: "First Motors is located on Chandpur Road, near Kalyan Singh Rajkiya Medical College, Bulandshahr, Uttar Pradesh - 203001. Directions are available on our Contact page and Google Maps.",
       },
       {
         q: "What are your business operating hours?",
-        a: "Monday to Sunday: 9:30 AM – 7:30 PM (Open all 7 days).",
+        a: "Monday to Sunday: 9:30 AM - 7:30 PM (Open all 7 days).",
       },
       {
         q: "How can I directly contact First Motors representatives?",

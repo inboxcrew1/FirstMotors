@@ -17,7 +17,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_CONFIG.url),
   title: {
-    default: "Used Cars in Bulandshahr | First Motors — Second Hand Car Dealer",
+    default: "Used Cars in Bulandshahr | First Motors | Second Hand Car Dealer",
     template: "%s",
   },
   description:
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
     locale: "en_IN",
     url: SITE_CONFIG.url,
     siteName: SITE_CONFIG.name,
-    title: "Used Cars in Bulandshahr | First Motors — Second Hand Car Dealer",
+    title: "Used Cars in Bulandshahr | First Motors | Second Hand Car Dealer",
     description:
       "First Motors is Bulandshahr's trusted used car dealer. 100+ pre-owned cars available at our Chandpur Road showroom. Transparent pricing, easy finance & test drives.",
     images: [
@@ -72,7 +72,7 @@ export const metadata: Metadata = {
         url: SITE_CONFIG.ogImage,
         width: 1200,
         height: 630,
-        alt: "First Motors — Used Cars in Bulandshahr",
+        alt: "First Motors | Used Cars in Bulandshahr",
       },
     ],
   },
@@ -151,7 +151,7 @@ const websiteSchema = {
   "@id": `${SITE_CONFIG.url}/#website`,
   name: SITE_CONFIG.name,
   url: SITE_CONFIG.url,
-  description: "Used car dealer in Bulandshahr — buy, sell or exchange pre-owned cars. 100+ cars available in showroom.",
+  description: "Used car dealer in Bulandshahr. Buy, sell or exchange pre-owned cars. 100+ cars available in showroom.",
   publisher: { "@id": `${SITE_CONFIG.url}/#business` },
 };
 

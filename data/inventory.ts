@@ -1,5 +1,5 @@
 // =============================================================================
-// FIRST MOTORS — VEHICLE INVENTORY
+// FIRST MOTORS - VEHICLE INVENTORY
 // Verified quality pre-owned vehicles.
 // =============================================================================
 

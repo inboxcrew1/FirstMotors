@@ -9,7 +9,7 @@ const WHY_ITEMS = [
   {
     emoji: "📋",
     title: "Transparent Information",
-    desc: "Honest details about ownership, kilometres, fuel, and known history — no surprises.",
+    desc: "Honest details about ownership, kilometres, fuel, and known history with zero surprises.",
   },
   {
     emoji: "🚗",

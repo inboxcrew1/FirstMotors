@@ -6,7 +6,7 @@ import { SITE_CONFIG } from "@/data/config";
 export const metadata: Metadata = {
   title: "About First Motors | 10+ Years Trusted Used Car Dealer in Bulandshahr",
   description:
-    "Learn about First Motors — Bulandshahr's trusted pre-owned car dealership with 10+ years of automotive excellence, 100+ vehicles in showroom stock, thorough vehicle quality checks, and 500+ happy customers.",
+    "Learn about First Motors, Bulandshahr's trusted pre-owned car dealership with 10+ years of automotive excellence, 100+ vehicles in showroom stock, thorough vehicle quality checks, and 500+ happy customers.",
   alternates: {
     canonical: "https://firstmotorsbsr.com/about",
   },
@@ -137,7 +137,7 @@ export default function AboutPage() {
                 We believe that buying a second-hand car should be completely transparent, simple, and honest. Every car in our showroom is physically inspected, documentation-verified, and presented with genuine details so our customers can drive away with complete confidence.
               </p>
               <p>
-                Whether you are buying your first hatchback, upgrading to a family SUV, or seeking to sell or exchange your current vehicle — First Motors provides personal attention, fair pricing, and end-to-end RC transfer support.
+                Whether you are buying your first hatchback, upgrading to a family SUV, or seeking to sell or exchange your current vehicle, First Motors provides personal attention, fair pricing, and end-to-end RC transfer support.
               </p>
             </div>
           </div>
@@ -252,7 +252,7 @@ export default function AboutPage() {
                 Our Showroom in Bulandshahr
               </h2>
               <p className="text-gray-600 mt-2 text-sm sm:text-base">
-                Chandpur Road, near Kalyan Singh Rajkiya Medical College, Bulandshahr, Uttar Pradesh – 203001
+                Chandpur Road, near Kalyan Singh Rajkiya Medical College, Bulandshahr, Uttar Pradesh - 203001
               </p>
             </div>
 

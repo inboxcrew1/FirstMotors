@@ -200,7 +200,7 @@ export default function LocationSection() {
                     <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1">Business Hours</p>
                     <div className="space-y-0.5 text-sm text-gray-700">
                       <p className="font-semibold text-emerald-700">Open All 7 Days</p>
-                      <p>Monday – Sunday: 9:30 AM – 7:30 PM</p>
+                      <p>Monday to Sunday: 9:30 AM - 7:30 PM</p>
                     </div>
                   </div>
                 </div>

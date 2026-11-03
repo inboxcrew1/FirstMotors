@@ -9,9 +9,9 @@ import { SITE_CONFIG } from "@/data/config";
 // Budget chip options
 const BUDGET_CHIPS = [
   { label: "Under ₹3L", value: "0-3" },
-  { label: "₹3–5L", value: "3-5" },
-  { label: "₹5–8L", value: "5-8" },
-  { label: "₹8–12L", value: "8-12" },
+  { label: "₹3-5L", value: "3-5" },
+  { label: "₹5-8L", value: "5-8" },
+  { label: "₹8-12L", value: "8-12" },
   { label: "₹12L+", value: "12-99" },
 ];
 
@@ -271,7 +271,7 @@ export default function HeroSection() {
                       Get your car valued by First Motors
                     </h3>
                     <p className="text-sm text-gray-500 leading-relaxed">
-                      Tell us about your car and we&apos;ll give you a fair, transparent valuation — with no obligation to sell.
+                      Tell us about your car and we&apos;ll give you a fair, transparent valuation with no obligation to sell.
                     </p>
                   </div>
                   <div className="flex flex-col gap-3 w-full">

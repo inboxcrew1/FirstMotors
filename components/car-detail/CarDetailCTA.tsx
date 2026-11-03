@@ -57,7 +57,7 @@ export default function CarDetailCTA({ car, whatsappLink }: CarDetailCTAProps) {
           className="badge w-full justify-center text-sm py-2 mb-4"
           style={{ background: "#fef3c7", color: "#92400e" }}
         >
-          Reserved — Contact for availability
+          Reserved: Contact for availability
         </div>
       )}
 

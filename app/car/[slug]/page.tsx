@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!car) return { title: "Car Not Found | First Motors" };
 
   const title = `Used ${car.brand} ${car.model} ${car.variant} ${car.year} for Sale in Bulandshahr | First Motors`;
-  const description = `Buy this ${car.year} ${car.brand} ${car.model} ${car.variant} in Bulandshahr — ${formatKmExact(car.kmDriven)}, ${car.fuelType}, ${car.transmission}, ${car.ownership}. Price: ${formatPrice(car.price)}. Test drive available at First Motors, Chandpur Road, Bulandshahr.`;
+  const description = `Buy this ${car.year} ${car.brand} ${car.model} ${car.variant} in Bulandshahr: ${formatKmExact(car.kmDriven)}, ${car.fuelType}, ${car.transmission}, ${car.ownership}. Price: ${formatPrice(car.price)}. Test drive available at First Motors, Chandpur Road, Bulandshahr.`;
 
   return {
     title,

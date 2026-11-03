@@ -36,7 +36,7 @@ const breadcrumbSchema = {
 };
 
 const STEPS = [
-  { n: "01", icon: "🚗", title: "Share Your Current Car Details", desc: "Tell us about the car you want to exchange — make, model, year, and condition." },
+  { n: "01", icon: "🚗", title: "Share Your Current Car Details", desc: "Tell us about the car you want to exchange: make, model, year, and condition." },
   { n: "02", icon: "🔍", title: "We Evaluate Your Car", desc: "Our team assesses your vehicle's current market value at our Bulandshahr showroom." },
   { n: "03", icon: "🔄", title: "Select Your Upgrade", desc: "Choose from our selected online inventory or 100+ showroom cars. Pay only the difference." },
 ];

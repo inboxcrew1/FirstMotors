@@ -10,10 +10,10 @@ interface TestDriveFormProps {
 }
 
 const TIME_SLOTS = [
-  "Morning (9 AM – 11 AM)",
-  "Afternoon (11 AM – 2 PM)",
-  "Afternoon (2 PM – 5 PM)",
-  "Evening (5 PM – 7 PM)",
+  "Morning (9 AM - 11 AM)",
+  "Afternoon (11 AM - 2 PM)",
+  "Afternoon (2 PM - 5 PM)",
+  "Evening (5 PM - 7 PM)",
 ];
 
 function TestDriveFormInner({ cars }: TestDriveFormProps) {

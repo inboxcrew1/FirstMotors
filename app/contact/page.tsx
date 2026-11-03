@@ -138,7 +138,7 @@ export default function ContactPage() {
                     <p className="text-xs text-gray-400 font-medium mb-0.5">Showroom Hours</p>
                     <div className="text-sm text-gray-700 space-y-0.5">
                       <p className="font-semibold text-emerald-700">Open All 7 Days</p>
-                      <p>Monday – Sunday: 9:30 AM – 7:30 PM</p>
+                      <p>Monday to Sunday: 9:30 AM - 7:30 PM</p>
                     </div>
                   </div>
                 </div>

@@ -9,7 +9,7 @@ import LocationSection from "@/components/home/LocationSection";
 import MobileStickyCTA from "@/components/layout/MobileStickyCTA";
 
 export const metadata: Metadata = {
-  title: "Used Cars in Bulandshahr | First Motors — Second Hand Car Dealer",
+  title: "Used Cars in Bulandshahr | First Motors | Second Hand Car Dealer",
   description:
     "Buy quality second-hand cars in Bulandshahr at First Motors. 100+ cars available in showroom stock. Maruti Suzuki, Hyundai, Tata & more. Transparent pricing, easy EMI & test drives.",
   alternates: {
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://firstmotorsbsr.com",
     siteName: "First Motors",
-    title: "Used Cars in Bulandshahr | First Motors — Second Hand Car Dealer",
+    title: "Used Cars in Bulandshahr | First Motors | Second Hand Car Dealer",
     description: "Buy quality second-hand cars in Bulandshahr at First Motors. 100+ cars available in showroom stock. Transparent pricing, easy EMI & test drives.",
     images: [{ url: "https://firstmotorsbsr.com/showroom.jpg", width: 1200, height: 630, alt: "First Motors Showroom Bulandshahr" }],
   },

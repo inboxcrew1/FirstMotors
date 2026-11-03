@@ -1,4 +1,4 @@
-// SkeletonCard — shimmer placeholder matching CarCard layout
+// SkeletonCard - shimmer placeholder matching CarCard layout
 // Uses CSS animation via inline keyframe style tag; no framer-motion dependency
 
 export default function SkeletonCard() {

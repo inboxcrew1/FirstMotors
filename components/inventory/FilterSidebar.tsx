@@ -153,7 +153,7 @@ export default function FilterSidebar({
               style={{ padding: "0.5rem 0.75rem" }}
             />
           </div>
-          <span className="mt-5 text-gray-400 text-sm">–</span>
+          <span className="mt-5 text-gray-400 text-sm">-</span>
           <div className="flex-1">
             <label className="label-fm" style={{ fontSize: "0.7rem" }}>Max (₹ Lakh)</label>
             <input
@@ -233,7 +233,7 @@ export default function FilterSidebar({
               style={{ padding: "0.5rem 0.75rem" }}
             />
           </div>
-          <span className="mt-5 text-gray-400 text-sm">–</span>
+          <span className="mt-5 text-gray-400 text-sm">-</span>
           <div className="flex-1">
             <label className="label-fm" style={{ fontSize: "0.7rem" }}>To</label>
             <input

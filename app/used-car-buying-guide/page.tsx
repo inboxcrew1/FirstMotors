@@ -3,7 +3,7 @@ import Link from "next/link";
 import { SITE_CONFIG } from "@/data/config";
 
 export const metadata: Metadata = {
-  title: "Used Car Buying Guide — How to Buy a Second Hand Car in Bulandshahr | First Motors",
+  title: "Used Car Buying Guide | How to Buy a Second Hand Car in Bulandshahr | First Motors",
   description:
     "Complete guide to buying a used car in Bulandshahr. Learn what to check, which documents you need, how RC transfer works, finance options & how to avoid common mistakes.",
   alternates: {
@@ -84,7 +84,7 @@ const faqSchema = {
 const SECTIONS = [
   {
     title: "1. Set Your Budget",
-    body: "Before you start searching, decide your total budget — not just the car price, but also RC transfer fees, insurance renewal, and any immediate repairs. Keep 10–15% aside beyond the car price for extras.\n\nBudget ranges for used cars in Bulandshahr:\n• Under ₹3 Lakh: Entry-level hatchbacks\n• ₹3–6 Lakh: Well-maintained hatchbacks and small sedans\n• ₹6–12 Lakh: Compact SUVs, premium hatchbacks\n• ₹12 Lakh+: Newer SUVs and premium vehicles",
+    body: "Before you start searching, decide your total budget, not just the car price, but also RC transfer fees, insurance renewal, and any immediate repairs. Keep 10-15% aside beyond the car price for extras.\n\nBudget ranges for used cars in Bulandshahr:\n• Under ₹3 Lakh: Entry-level hatchbacks\n• ₹3-6 Lakh: Well-maintained hatchbacks and small sedans\n• ₹6-12 Lakh: Compact SUVs, premium hatchbacks\n• ₹12 Lakh+: Newer SUVs and premium vehicles",
   },
   {
     title: "2. Choose the Right Car Type",
@@ -108,11 +108,11 @@ const SECTIONS = [
   },
   {
     title: "7. Finance for Used Cars",
-    body: "Used car loans are available from most banks and NBFCs:\n• Interest rates: typically 10–18% per annum\n• Loan-to-Value: up to 80–85% of car value\n• Tenure: up to 5 years\n• Documents needed: Aadhaar, PAN, income proof, bank statements\n\nContact First Motors and we will help connect you with available finance options.",
+    body: "Used car loans are available from most banks and NBFCs:\n• Interest rates: typically 10-18% per annum\n• Loan-to-Value: up to 80-85% of car value\n• Tenure: up to 5 years\n• Documents needed: Aadhaar, PAN, income proof, bank statements\n\nContact First Motors and we will help connect you with available finance options.",
   },
   {
     title: "8. Common Mistakes to Avoid",
-    body: "• Skipping the test drive — always drive the car yourself\n• Paying without verifying RC, insurance and loan status\n• Relying only on photos — always inspect physically\n• Ignoring service history — it reveals hidden issues\n• Buying without a proper bill or sale agreement\n• Not cross-checking chassis and engine numbers with RC details",
+    body: "• Skipping the test drive: always drive the car yourself\n• Paying without verifying RC, insurance and loan status\n• Relying only on photos: always inspect physically\n• Ignoring service history: it reveals hidden issues\n• Buying without a proper bill or sale agreement\n• Not cross-checking chassis and engine numbers with RC details",
   },
 ];
 
@@ -141,10 +141,10 @@ export default function BuyingGuidePage() {
             className="text-3xl sm:text-4xl font-extrabold text-white mb-3"
             style={{ fontFamily: "var(--font-heading)" }}
           >
-            Used Car Buying Guide — Bulandshahr
+            Used Car Buying Guide: Bulandshahr
           </h1>
           <p className="text-slate-300 max-w-2xl leading-relaxed">
-            Everything you need to know before buying a second-hand car — inspection checklist, documents, RC transfer, finance options and more.
+            Everything you need to know before buying a second-hand car, including inspection checklist, documents, RC transfer, finance options and more.
           </p>
           <p className="text-slate-400 text-sm mt-3">By First Motors · Bulandshahr, U.P.</p>
         </div>

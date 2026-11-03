@@ -26,9 +26,9 @@ type StepData = {
 
 const KM_OPTIONS = [
   "Under 20,000 km",
-  "20,000 – 50,000 km",
-  "50,000 – 80,000 km",
-  "80,000 – 1,20,000 km",
+  "20,000 - 50,000 km",
+  "50,000 - 80,000 km",
+  "80,000 - 1,20,000 km",
   "Over 1,20,000 km",
 ];
 const FUEL_OPTIONS = ["Petrol", "Diesel", "CNG", "Electric", "Hybrid"];
@@ -86,7 +86,7 @@ export default function ValuationForm() {
         }),
       });
     } catch {
-      // Silent fallback — contact via WhatsApp/phone still available
+      // Silent fallback - contact via WhatsApp/phone still available
     }
     setSubmitted(true);
   };
@@ -102,7 +102,7 @@ export default function ValuationForm() {
           Thank you, <strong>{data.name}</strong>. Our First Motors team will contact you within 24 hours with your valuation.
         </p>
         <p className="text-sm text-gray-400 mb-6">
-          We do not provide instant automated valuations — every valuation is reviewed by our team to ensure accuracy and fairness.
+          We do not provide instant automated valuations. Every valuation is reviewed by our team to ensure accuracy and fairness.
         </p>
         <a href="/" className="btn btn-secondary">Back to Home</a>
       </div>

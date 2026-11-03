@@ -14,7 +14,7 @@ export default function VehicleHistory({ car }: VehicleHistoryProps) {
       value: car.insuranceExpiry
         ? car.insuranceExpiry.toLowerCase() === "yes" || car.insuranceExpiry.toLowerCase() === "valid"
           ? "Valid / Active"
-          : `${car.insuranceType ?? "Comprehensive"} — Valid till ${car.insuranceExpiry}`
+          : `${car.insuranceType ?? "Comprehensive"} (Valid till ${car.insuranceExpiry})`
         : "Available on request",
     },
     {
@@ -32,7 +32,7 @@ export default function VehicleHistory({ car }: VehicleHistoryProps) {
         car.accidentHistory === false
           ? "No major accident reported"
           : car.accidentHistory === true
-          ? "Accident history present — ask for details"
+          ? "Accident history present (ask for details)"
           : "Available on request",
     },
     { label: "Service Records", value: "Available on request" },
